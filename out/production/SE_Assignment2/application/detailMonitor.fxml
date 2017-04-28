@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="426.0" prefWidth="321.0" styleClass="pan" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <VBox layoutX="53.0" layoutY="20.0" opacity="0.81" prefHeight="379.0" prefWidth="219.0" styleClass="VBox">
+         <children>
+            <AnchorPane prefHeight="90.0" prefWidth="219.0">
+               <children>
+                  <Label fx:id="locName" layoutX="69.0" layoutY="37.0" text="Location Name" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="90.0" prefWidth="219.0">
+               <children>
+                  <Label fx:id="dateTime" layoutX="76.0" layoutY="37.0" text="Date &amp; Time" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="100.0" prefHeight="90.0" prefWidth="219.0">
+               <children>
+                  <Label fx:id="temp" layoutX="76.0" layoutY="37.0" text="Temperature" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="190.0" prefHeight="90.0" prefWidth="219.0">
+               <children>
+                  <Label fx:id="rainFall" layoutX="87.0" layoutY="37.0" text="Rain Fall" />
+               </children>
+            </AnchorPane>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </VBox>
+      <Button fx:id="rightButton" layoutX="268.0" layoutY="187.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="30.0" style="-fx-background-color: transparent;" textFill="TRANSPARENT">
+         <graphic>
+            <ImageView id="rightArrow" fx:id="rightArrow" fitHeight="44.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@006764-3d-transparent-glass-icon-arrows-arrowhead-solid-right.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="leftButton" layoutX="-8.0" layoutY="187.0" mnemonicParsing="false" style="-fx-background-color: transparent;" textFill="TRANSPARENT">
+         <graphic>
+            <ImageView id="leftArrow" fx:id="leftArrow" fitHeight="56.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@006763-3d-transparent-glass-icon-arrows-arrowhead-solid-left.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</Pane>
