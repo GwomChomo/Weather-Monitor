@@ -89,7 +89,7 @@ public class MainController implements Initializable{
 		} catch (ExceptionException e) {
 			e.printStackTrace();
 		}
-		
+		//fjfjfjf
 		list = FXCollections.observableArrayList(locs);
 		System.out.println('A');
 		System.out.println(list);
