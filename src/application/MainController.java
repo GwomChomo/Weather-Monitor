@@ -69,7 +69,7 @@ public class MainController implements Initializable{
 	SingleMonitorFactory singleMonitorFactory = new SingleMonitorFactory();
 	CompositeMonitorFactory compositeMonitorFactory = new CompositeMonitorFactory();
 	
-	PauseTransition wait = new PauseTransition(Duration.minutes(1));
+	PauseTransition wait = new PauseTransition(Duration.minutes(5));
 
 	
 							
