@@ -1,11 +1,9 @@
 package application;
 
-public class CompositeMonitor extends Monitor {
+public class CompositeMonitor extends WeatherMonitor {
 	
 	String rainfall, temperature, time, location;
-	private final int RAINFALLINDEX =1;
-	private final int TEMPERATUREINDEX = 1;
-	private final int TIMESTAMPINDEX = 1;
+	
 	
 	
 	public CompositeMonitor(RainfallMonitor rain, TemperatureMonitor temperature){

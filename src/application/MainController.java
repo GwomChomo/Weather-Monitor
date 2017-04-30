@@ -50,67 +50,67 @@ public class MainController implements Initializable{
 	private TableView<Monitor> mainTable;
 	@FXML
 	private TableColumn<Monitor, String> locationColumn, rainfallColumn, temperatureColumn, timeColumn;
-	
+
 
 	String choice;
-	ObservableList<String> list; 
-	
+	ObservableList<String> list;
+
 	ObservableList<Monitor> data;
 	ArrayList<String> locations = new ArrayList<String>();
 	ArrayList<Monitor> monitors= new ArrayList<Monitor>();
-	
-	
+
+
 	RainfallMonitor rainMonitor;
-	
-	MelbourneWeather2Stub MelbourneWeatherService; 
+
+	MelbourneWeather2Stub MelbourneWeatherService;
 	Connector connect;
 	MonitorFactory me;
-	
+
 	SingleMonitorFactory singleMonitorFactory = new SingleMonitorFactory();
 	CompositeMonitorFactory compositeMonitorFactory = new CompositeMonitorFactory();
-	
+
 	PauseTransition wait = new PauseTransition(Duration.minutes(5));
 
-	
-							
+
+
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		
-		 try {
+
+		try {
 			connect = new Connector();
 		} catch (AxisFault e) {
 			e.printStackTrace();
 		}
-		 
-		 
-		 ArrayList<String> locations = new ArrayList<String>();
-		 
-		 try {
+
+
+		ArrayList<String> locations = new ArrayList<String>();
+
+		try {
 			locations = getLocations();
 		} catch (RemoteException e) {
-		
+
 			e.printStackTrace();
 		} catch (ExceptionException e) {
 
 			e.printStackTrace();
 		}
-		
+
 		list = FXCollections.observableArrayList(locations);
 		locationsMenu.setItems(list);
 	}
-	
+
 	public ArrayList<String> getLocations() throws RemoteException, ExceptionException{
-		 locations = connect.getLocations();
-		 return locations;
+		locations = connect.getLocations();
+		return locations;
 	}
-	
+
 	public void comboChanged(ActionEvent ae){
 		choice = locationsMenu.getValue();
 	}
-	
-	
-	
-	
+
+
+
+
 	public void viewWeather(ActionEvent ae) throws RemoteException, ExceptionException{
 		ArrayList<Monitor> m = new ArrayList<Monitor>();
 		if(choice!=null){
@@ -128,63 +128,67 @@ public class MainController implements Initializable{
 				singleMonitorFactory.createRainfallMonitor(choice);
 				monitors = singleMonitorFactory.returnMonitors();
 				m.addAll(monitors);
-			} 
-			
+			}
+
 			if(monitors.size() == 1){
 				setUpTable();
 			}
-			
+
 			displayMonitors(m);
 		}
-     
-	        //Add Timer code here
-	        wait.playFromStart();
-	        
-	        wait.setOnFinished(new EventHandler<javafx.event.ActionEvent>(){
-	    		@Override
-	    	public void handle(javafx.event.ActionEvent event){
-	    		try {
+
+		//Add Timer code here
+		wait.playFromStart();
+
+		wait.setOnFinished(new EventHandler<javafx.event.ActionEvent>(){
+			@Override
+			public void handle(javafx.event.ActionEvent event){
+				try {
 					refreshMonitors();
 				} catch (RemoteException e) {
 					e.printStackTrace();
 				} catch (ExceptionException e) {
 					e.printStackTrace();
 				}
-	    	}
-	    	});
+			}
+		});
 
 	}
-	
+
 	public void setUpTable(){
-			locationColumn.setCellValueFactory(
-				    new PropertyValueFactory<>("location")
-				);
-				rainfallColumn.setCellValueFactory(
-				    new PropertyValueFactory<>("rainfall")
-				);
-				
-				temperatureColumn.setCellValueFactory(
-					    new PropertyValueFactory<>("temperature")
-					);
-				
-				timeColumn.setCellValueFactory(
-				    new PropertyValueFactory<>("time")
-				);
+		locationColumn.setCellValueFactory(
+				new PropertyValueFactory<>("location")
+		);
+		rainfallColumn.setCellValueFactory(
+				new PropertyValueFactory<>("rainfall")
+		);
+
+		temperatureColumn.setCellValueFactory(
+				new PropertyValueFactory<>("temperature")
+		);
+
+		timeColumn.setCellValueFactory(
+				new PropertyValueFactory<>("time")
+		);
 	}
 
 	public void displayMonitors(ArrayList<Monitor> m){
 		data = FXCollections.observableList(m);
-		mainTable.setItems(data); 
+		mainTable.setItems(data);
 	}
-	
+
 	public void removeMonitor(ActionEvent ae){
 		ObservableList<Monitor> monitorSelected, allMonitors;
 		allMonitors = mainTable.getItems();
 		monitorSelected = mainTable.getSelectionModel().getSelectedItems();
 		monitorSelected.forEach(allMonitors::remove);
-		
+
 		for(int i = 0; i<monitors.size();i++){
 			monitors.remove(monitorSelected);
+		}
+
+		if(mainTable.getItems().isEmpty()){
+			monitors.clear();
 		}
 	}
 
@@ -192,18 +196,14 @@ public class MainController implements Initializable{
 		ArrayList<Monitor> toUpdate = new ArrayList<>();
 		ObservableList<Monitor> currentItems;
 		currentItems = mainTable.getItems();
-		
+
 		for(Monitor m: currentItems){
 			toUpdate.add(m);
 		}
-		
-		
-		System.out.println(toUpdate);
-		toUpdate = connect.refresh(toUpdate);
-		
-		currentItems =  FXCollections.observableList(toUpdate);
 
-		mainTable.setItems(currentItems);
+		toUpdate = connect.refresh(toUpdate);
+		mainTable.getItems().clear();
+		mainTable.setItems( FXCollections.observableList(toUpdate));
 		wait.playFromStart();
 
 	}

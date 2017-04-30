@@ -2,19 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0657273a-3a43-4041-9335-b009d6ef4b34" name="Default" comment="added methods to the class diagram">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/application/006763-3d-transparent-glass-icon-arrows-arrowhead-solid-left.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/application/006764-3d-transparent-glass-icon-arrows-arrowhead-solid-right.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/application/Weather.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/application/clouds-295278_960_720.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/application/detailMonitor.fxml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UML Diagrams/Melbourne Weather.jpg" afterPath="$PROJECT_DIR$/UML Diagrams/Melbourne Weather.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/application/Main.class" afterPath="$PROJECT_DIR$/out/production/SE_Assignment2/application/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/application/MainController.class" afterPath="$PROJECT_DIR$/out/production/SE_Assignment2/application/MainController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/application/Monitor.class" afterPath="$PROJECT_DIR$/out/production/SE_Assignment2/application/Monitor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/application/WeatherMonitor.class" afterPath="$PROJECT_DIR$/out/production/SE_Assignment2/application/WeatherMonitor.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UML Diagrams/Create Single Weather Monitor.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UML Diagrams/Refresh data after 5 minutes.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UML Diagrams/Remove Monitor.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/application/Main.fxml" afterPath="$PROJECT_DIR$/out/production/SE_Assignment2/application/Main.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/CompositeMonitor.java" afterPath="$PROJECT_DIR$/src/application/CompositeMonitor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/Connector.java" afterPath="$PROJECT_DIR$/src/application/Connector.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/MainController.java" afterPath="$PROJECT_DIR$/src/application/MainController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,9 +49,25 @@
       <file leaf-file-name="CompositeMonitor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/application/CompositeMonitor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-              <folding />
+            <state relative-caret-position="238">
+              <caret line="14" column="4" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+              <folding>
+                <marker date="1493583543161" expanded="true" signature="210:356" ph="{...}" />
+                <marker date="1493583543161" expanded="false" signature="467:470" ph=" }" />
+                <marker date="1493583543161" expanded="false" signature="518:522" ph=" { " />
+                <marker date="1493583543161" expanded="false" signature="562:565" ph=" }" />
+                <marker date="1493583543161" expanded="false" signature="604:608" ph=" { " />
+                <marker date="1493583543161" expanded="false" signature="636:639" ph=" }" />
+                <marker date="1493583543161" expanded="false" signature="670:674" ph=" { " />
+                <marker date="1493583543161" expanded="false" signature="690:693" ph=" }" />
+                <marker date="1493583543161" expanded="false" signature="729:733" ph=" { " />
+                <marker date="1493583543161" expanded="false" signature="785:789" ph=" { " />
+                <marker date="1493583543161" expanded="false" signature="805:808" ph=" }" />
+                <marker date="1493583543161" expanded="false" signature="848:853" ph=" { " />
+                <marker date="1493583543161" expanded="false" signature="865:868" ph=" }" />
+                <marker date="1493583543161" expanded="false" signature="896:900" ph=" { " />
+                <marker date="1493583543161" expanded="false" signature="966:969" ph=" }" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -74,26 +85,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Connector.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Connector.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/application/Connector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-521">
+            <state relative-caret-position="-538">
               <caret line="16" column="4" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
               <folding>
-                <element signature="method#getRainfall#0;class#Connector#0" expanded="false" />
+                <marker date="1493583552154" expanded="true" signature="2694:2869" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/application/MainController.java">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="191" column="0" lean-forward="false" selection-start-line="191" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/application/MainController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1309">
+              <caret line="211" column="0" lean-forward="true" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
               <folding>
-                <element signature="e#1429#1438#0" expanded="true" />
-                <element signature="e#2659#2668#0" expanded="true" />
+                <element signature="e#1426#1435#0" expanded="true" />
+                <element signature="e#2616#2625#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -147,8 +168,9 @@
         <option value="$PROJECT_DIR$/src/application/detailMonitor.fxml" />
         <option value="$PROJECT_DIR$/src/application/CompositeMonitorFactory.java" />
         <option value="$PROJECT_DIR$/src/application/CompositeMonitor.java" />
-        <option value="$PROJECT_DIR$/src/application/MainController.java" />
         <option value="$PROJECT_DIR$/src/application/Connector.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/application/MainController.java" />
       </list>
     </option>
   </component>
@@ -231,20 +253,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="WebContent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trump-Assignments" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trump-Assignments" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="UML Diagrams" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -260,28 +268,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trump-Assignments" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trump-Assignments" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="melbourneweather2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -877,7 +863,7 @@
       <workItem from="1493331303714" duration="3378000" />
       <workItem from="1493378655959" duration="7244000" />
       <workItem from="1493469954976" duration="2428000" />
-      <workItem from="1493562425379" duration="12641000" />
+      <workItem from="1493562425379" duration="15551000" />
     </task>
     <task id="LOCAL-00001" summary="i just made a commeent">
       <created>1493379065936</created>
@@ -928,11 +914,18 @@
       <option name="project" value="LOCAL" />
       <updated>1493570090730</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added methods to the class diagram">
+      <created>1493581183497</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1493581183497</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25691000" />
+    <option name="totallyTimeSpent" value="28601000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1058,7 +1051,7 @@
         <state relative-caret-position="442">
           <caret line="26" column="96" lean-forward="false" selection-start-line="26" selection-start-column="96" selection-end-line="26" selection-end-column="96" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1114,7 +1107,7 @@
         <state relative-caret-position="340">
           <caret line="26" column="96" lean-forward="true" selection-start-line="26" selection-start-column="96" selection-end-line="26" selection-end-column="96" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1244,7 +1237,7 @@
         <state relative-caret-position="17">
           <caret line="26" column="96" lean-forward="false" selection-start-line="26" selection-start-column="96" selection-end-line="26" selection-end-column="96" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1271,9 +1264,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/application/CompositeMonitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-          <folding />
+        <state relative-caret-position="238">
+          <caret line="14" column="4" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+          <folding>
+            <marker date="1493583543161" expanded="true" signature="210:356" ph="{...}" />
+            <marker date="1493583543161" expanded="false" signature="467:470" ph=" }" />
+            <marker date="1493583543161" expanded="false" signature="518:522" ph=" { " />
+            <marker date="1493583543161" expanded="false" signature="562:565" ph=" }" />
+            <marker date="1493583543161" expanded="false" signature="604:608" ph=" { " />
+            <marker date="1493583543161" expanded="false" signature="636:639" ph=" }" />
+            <marker date="1493583543161" expanded="false" signature="670:674" ph=" { " />
+            <marker date="1493583543161" expanded="false" signature="690:693" ph=" }" />
+            <marker date="1493583543161" expanded="false" signature="729:733" ph=" { " />
+            <marker date="1493583543161" expanded="false" signature="785:789" ph=" { " />
+            <marker date="1493583543161" expanded="false" signature="805:808" ph=" }" />
+            <marker date="1493583543161" expanded="false" signature="848:853" ph=" { " />
+            <marker date="1493583543161" expanded="false" signature="865:868" ph=" }" />
+            <marker date="1493583543161" expanded="false" signature="896:900" ph=" { " />
+            <marker date="1493583543161" expanded="false" signature="966:969" ph=" }" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1288,23 +1297,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/MainController.java">
+    <entry file="file://$PROJECT_DIR$/src/application/Connector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="191" column="0" lean-forward="false" selection-start-line="191" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
+        <state relative-caret-position="-538">
+          <caret line="16" column="4" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
           <folding>
-            <element signature="e#1429#1438#0" expanded="true" />
-            <element signature="e#2659#2668#0" expanded="true" />
+            <marker date="1493583552154" expanded="true" signature="2694:2869" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/Connector.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-521">
-          <caret line="16" column="4" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1309">
+          <caret line="211" column="0" lean-forward="true" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
           <folding>
-            <element signature="method#getRainfall#0;class#Connector#0" expanded="false" />
+            <element signature="e#1426#1435#0" expanded="true" />
+            <element signature="e#2616#2625#0" expanded="true" />
           </folding>
         </state>
       </provider>

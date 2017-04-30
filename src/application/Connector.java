@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import org.apache.axis2.AxisFault;
 
-import javafx.collections.ObservableList;
+//import javafx.collections.ObservableList;
 
 
 public class Connector {
@@ -29,6 +29,7 @@ public class Connector {
 	}
 		 
 	public String [] getTemperature(String location) throws RemoteException, ExceptionException {
+
     	GetTemperature TemperatureRequest = new GetTemperature();
 		 TemperatureRequest.setLocation(location);
 		 TemperatureResponse = MelbourneWeatherService.getTemperature(TemperatureRequest);
@@ -46,39 +47,39 @@ public class Connector {
 	
 	
 	public ArrayList<Monitor> refresh(ArrayList<Monitor> monitor) throws RemoteException, ExceptionException{
+		ArrayList<Monitor> updated = new ArrayList<Monitor>();
 		String [] rain, temperature;
 		String location;
-		
-		
 		for(Monitor m: monitor){
 			if(m instanceof CompositeMonitor){
 				location = ((CompositeMonitor) m).getLocation();
 				rain = getRainfall(location);
 				temperature = getTemperature(location);
-
-
 				((CompositeMonitor) m).setRainfall(rain);
 				((CompositeMonitor) m).setTemperature(temperature);
-
+				((CompositeMonitor) m).setTime(temperature);
+				updated.add(m);
+				
 			}
 			else if(m instanceof RainfallMonitor){
-				((RainfallMonitor) m).setRainfall(getRainfall(((RainfallMonitor) m).getLocation()));
-			
-				
+				location = ((RainfallMonitor) m).getLocation();
+				rain = getRainfall(location);
+				((RainfallMonitor) m).setRainfall(rain);
+				((RainfallMonitor) m).setTime(rain);
+				updated.add(m);
 			}
 			else {
-				((TemperatureMonitor) m).setTemperature(getRainfall(((TemperatureMonitor) m).getLocation()));
-				((TemperatureMonitor) m).setTime(getRainfall(((TemperatureMonitor) m).getLocation()));
-				
+				location = ((TemperatureMonitor) m).getLocation();
+				temperature = getTemperature(location);
+				((TemperatureMonitor) m).setTemperature(temperature);
+				((TemperatureMonitor) m).setTime(temperature);
+				updated.add(m);
 			}
-			
 		}
-		
-		return monitor;
+		return updated;
 	}
 	
 	public ArrayList<String> getLocations() throws RemoteException, ExceptionException{
-
     	LocationsResponse = MelbourneWeatherService.getLocations();
 		locations = new ArrayList<String>(Arrays.asList(LocationsResponse.get_return()));
 		return locations;
