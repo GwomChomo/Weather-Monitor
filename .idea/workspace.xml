@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0657273a-3a43-4041-9335-b009d6ef4b34" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/006763-3d-transparent-glass-icon-arrows-arrowhead-solid-left.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/006764-3d-transparent-glass-icon-arrows-arrowhead-solid-right.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/Main.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/Main.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/MainController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/Monitor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/Weather.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/WeatherMonitor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/application.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/clouds-295278_960_720.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/detailMonitor.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/style.css" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/application/detailMonitor.fxml" afterPath="$PROJECT_DIR$/out/production/SE_Assignment2/application/detailMonitor.fxml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -673,7 +660,7 @@
       <workItem from="1493331303714" duration="3378000" />
       <workItem from="1493378655959" duration="7244000" />
       <workItem from="1493469954976" duration="2428000" />
-      <workItem from="1493562425379" duration="212000" />
+      <workItem from="1493562425379" duration="392000" />
     </task>
     <task id="LOCAL-00001" summary="i just made a commeent">
       <created>1493379065936</created>
@@ -682,11 +669,18 @@
       <option name="project" value="LOCAL" />
       <updated>1493379065936</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Previous code Deleted to make room for updated code.">
+      <created>1493562773683</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1493562773683</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13262000" />
+    <option name="totallyTimeSpent" value="13442000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -732,7 +726,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="i just made a commeent" />
-    <option name="LAST_COMMIT_MESSAGE" value="i just made a commeent" />
+    <MESSAGE value="Previous code Deleted to make room for updated code." />
+    <option name="LAST_COMMIT_MESSAGE" value="Previous code Deleted to make room for updated code." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
