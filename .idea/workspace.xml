@@ -2,6 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0657273a-3a43-4041-9335-b009d6ef4b34" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/application/CompositeMonitor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/application/CompositeMonitorFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/application/Connector.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/application/Main.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/application/MonitorFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/application/SingleMonitorFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/application/application.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -14,7 +21,18 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="MonitorFactory.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/application/MonitorFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -128,6 +146,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="melbourneweather2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trump-Assignments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SE_Assignment2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -660,7 +692,7 @@
       <workItem from="1493331303714" duration="3378000" />
       <workItem from="1493378655959" duration="7244000" />
       <workItem from="1493469954976" duration="2428000" />
-      <workItem from="1493562425379" duration="392000" />
+      <workItem from="1493562425379" duration="2295000" />
     </task>
     <task id="LOCAL-00001" summary="i just made a commeent">
       <created>1493379065936</created>
@@ -676,11 +708,18 @@
       <option name="project" value="LOCAL" />
       <updated>1493562773683</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Previous code Deleted to make room for updated code.">
+      <created>1493562878742</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1493562878742</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13442000" />
+    <option name="totallyTimeSpent" value="15345000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -933,7 +972,6 @@
     <entry file="file://$PROJECT_DIR$/src/application/MelbourneWeather2Stub.java" />
     <entry file="file://$PROJECT_DIR$/src/application/CompositeMonitorFactory.java" />
     <entry file="file://$PROJECT_DIR$/src/application/SingleMonitorFactory.java" />
-    <entry file="file://$PROJECT_DIR$/src/application/MonitorFactory.java" />
     <entry file="file://$PROJECT_DIR$/src/application/Weather.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1000,6 +1038,14 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/MonitorFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
