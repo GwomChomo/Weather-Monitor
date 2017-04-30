@@ -1,0 +1,18 @@
+.VBox{
+	-fx-background-image:
+	url(clouds-295278_960_720.png);
+	-fx-min-width: 217px;
+	-fx-min-height:387px;
+	-fx-border-radius:3px;
+	-fx-border-style:solid;
+	-fx-border-color:white;
+	-fx-border-width:5px;
+	
+}
+#rightButton{
+	-fx-background-color:transparent;
+}
+
+.pan{
+	-fx-background-color:silver;
+	}
