@@ -25,12 +25,10 @@ public class Connector {
 	ArrayList<String> locations = new ArrayList<String>();
 	
 	Connector() throws AxisFault{
-		System.out.println("Inside connector constructor");
 		MelbourneWeatherService = new MelbourneWeather2Stub();
 	}
 		 
 	public String [] getTemperature(String location) throws RemoteException, ExceptionException {
-		System.out.println("in temp");
     	GetTemperature TemperatureRequest = new GetTemperature();
 		 TemperatureRequest.setLocation(location);
 		 TemperatureResponse = MelbourneWeatherService.getTemperature(TemperatureRequest);
@@ -57,11 +55,11 @@ public class Connector {
 				location = ((CompositeMonitor) m).getLocation();
 				rain = getRainfall(location);
 				temperature = getTemperature(location);
-				System.out.println(temperature);
-				System.out.println("Before : " + m);
+
+
 				((CompositeMonitor) m).setRainfall(rain);
 				((CompositeMonitor) m).setTemperature(temperature);
-				System.out.println("After: " + m);
+
 			}
 			else if(m instanceof RainfallMonitor){
 				((RainfallMonitor) m).setRainfall(getRainfall(((RainfallMonitor) m).getLocation()));
@@ -80,10 +78,9 @@ public class Connector {
 	}
 	
 	public ArrayList<String> getLocations() throws RemoteException, ExceptionException{
-		System.out.println("inside connector get locations");
+
     	LocationsResponse = MelbourneWeatherService.getLocations();
 		locations = new ArrayList<String>(Arrays.asList(LocationsResponse.get_return()));
-		System.out.println(locations);
 		return locations;
     }
 	

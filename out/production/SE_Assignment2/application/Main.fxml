@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.image.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
@@ -14,7 +13,7 @@
    <children>
       <Button fx:id="refresh" layoutX="14.0" layoutY="67.0" mnemonicParsing="false" onAction="#refreshMonitors" text="Refresh" />
       <ComboBox fx:id="locationsMenu" layoutX="7.0" layoutY="27.0" onAction="#comboChanged" prefHeight="25.0" prefWidth="564.0" promptText="Select Location" />
-      <Button fx:id="view" layoutX="521.0" layoutY="67.0" mnemonicParsing="false" onAction="#viewWeather" text="View" />
+      <Button fx:id="views" layoutX="521.0" layoutY="67.0" mnemonicParsing="false" onAction="#viewWeather" text="View" />
       <Button fx:id="remove" layoutX="496.0" layoutY="468.0" mnemonicParsing="false" onAction="#removeMonitor" prefHeight="25.0" prefWidth="72.0" text="Remove" />
       <CheckBox fx:id="showRainfall" layoutX="113.0" layoutY="71.0" mnemonicParsing="false" text="Show Rainfall" />
       <CheckBox fx:id="showTemperature" layoutX="225.0" layoutY="71.0" mnemonicParsing="false" text="ShowTemperature" />
@@ -26,6 +25,5 @@
             <TableColumn fx:id="timeColumn" prefWidth="152.0" text="Time" />
         </columns>
       </TableView>
-      <Button fx:id="refresh1" layoutX="27.0" layoutY="468.0" mnemonicParsing="false" onAction="#changeView" text="Detail View" />
    </children>
 </AnchorPane>
