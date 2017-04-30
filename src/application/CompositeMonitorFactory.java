@@ -12,8 +12,6 @@ import org.apache.axis2.AxisFault;
 //import melbourneweather2.MelbourneWeather2Stub;
 
 import melbourneweather2.ExceptionException;
-//import melbourneweather2.MelbourneWeather2Stub.*;
-//import org.apache.axis2.AxisFault;
 
 /**
  * Created by Ernest Keita on 4/28/2017.
@@ -52,12 +50,9 @@ public class CompositeMonitorFactory extends MonitorFactory{
     }
    
    public void createCompositeMonitor(String location) throws RemoteException, ExceptionException{
-	  // System.out.println("Inside composite");
 	   createTemperatureMonitor(location);
 	   createRainfallMonitor(location);
 	   compositeMonitor = new CompositeMonitor(rainMonitor, temperatureMonitor);
-	  //System.out.println(compositeMonitor);
-	  // compositeMonitors.add(compositeMonitor);
 	   monitorList.add(compositeMonitor);
 	   
    }

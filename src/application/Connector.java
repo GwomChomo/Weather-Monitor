@@ -62,22 +62,13 @@ public class Connector {
 				((CompositeMonitor) m).setRainfall(rain);
 				((CompositeMonitor) m).setTemperature(temperature);
 				System.out.println("After: " + m);
-				
-				
-				///System.out.println(location);
-				/* ((CompositeMonitor) m).setRainfall(getRainfall(((CompositeMonitor) m).getLocation()));
-				 ((CompositeMonitor) m).setTemperature(getRainfall(((CompositeMonitor) m).getLocation()));
-				 ((CompositeMonitor) m).setTime(getRainfall(((CompositeMonitor) m).getLocation()));*/
-				// System.out.println("After: " + m);
 			}
 			else if(m instanceof RainfallMonitor){
-				//System.out.println("it's a rainfall monitor");
 				((RainfallMonitor) m).setRainfall(getRainfall(((RainfallMonitor) m).getLocation()));
 			
 				
 			}
 			else {
-				//System.out.println("it's a temperature monitor");
 				((TemperatureMonitor) m).setTemperature(getRainfall(((TemperatureMonitor) m).getLocation()));
 				((TemperatureMonitor) m).setTime(getRainfall(((TemperatureMonitor) m).getLocation()));
 				

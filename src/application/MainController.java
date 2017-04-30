@@ -202,10 +202,7 @@ public class MainController implements Initializable{
 		toUpdate = connect.refresh(toUpdate);
 		
 		currentItems =  FXCollections.observableList(toUpdate);
-		
-		//System.out.println("Current: " + currentItems);
-		 //mainTable.setItems( connect.refresh(currentItems));
-		//currentItems =  FXCollections.observableList(toUpdate);
+
 		mainTable.setItems(currentItems);
 		wait.playFromStart();
 
