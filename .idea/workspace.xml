@@ -2,6 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0657273a-3a43-4041-9335-b009d6ef4b34" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/application/Controller.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/application/Main.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/application/Main.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/application/MainController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/application/Weather App Class Diagram.ucls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/application/Weather.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/application/application.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/application/home.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/application/homeController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/application/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/connectors/Connect.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/connectors/Connector.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/connectors/MW2WeatherData.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/connectors/WeatherData.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/factory/CompositeMonitorFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/factory/MonitorFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/factory/SingleMonitorFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/melbourneweather2/ExceptionException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/melbourneweather2/MelbourneWeather2CallbackHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/melbourneweather2/MelbourneWeather2Stub.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/melbourneweathertimelapse/ExceptionException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/melbourneweathertimelapse/MelbourneWeatherTimeLapseCallbackHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/melbourneweathertimelapse/MelbourneWeatherTimeLapseStub.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/melbourneweathertimelapse/TestLapse.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/monitor/CompositeMonitor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/monitor/Monitor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/monitor/RainfallMonitor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/monitor/TemperatureMonitor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/monitor/WeatherMonitor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -723,15 +752,21 @@
       <option name="project" value="LOCAL" />
       <updated>1495302091398</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Add All">
+      <created>1495302206823</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1495302206823</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30629000" />
+    <option name="totallyTimeSpent" value="30710000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="20" width="1346" height="688" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -754,7 +789,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32871974" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962406" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962406" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -807,7 +842,8 @@
     <MESSAGE value="Stage 2 Initialize" />
     <MESSAGE value="packages created" />
     <MESSAGE value="Remove all" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove all" />
+    <MESSAGE value="Add All" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add All" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

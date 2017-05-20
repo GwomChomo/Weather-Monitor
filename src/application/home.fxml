@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="281.0" prefWidth="342.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="application.homeController">
+   <children>
+      <VBox layoutX="-99.0" layoutY="-195.0" prefHeight="150.0" prefWidth="145.0" />
+      <Button fx:id="melbWeather" layoutX="6.0" layoutY="41.0" mnemonicParsing="false" onAction="#melbButtonHandler" prefHeight="25.0" prefWidth="145.0" text="MelbourneWeather" />
+      <Button fx:id="timelapse" layoutX="6.0" layoutY="128.0" mnemonicParsing="false" onAction="#timelapseButtonHandler" prefHeight="25.0" prefWidth="145.0" text="Timelapse" />
+      <Button fx:id="exit" layoutX="6.0" layoutY="209.0" mnemonicParsing="false" onAction="#exitApplication" prefHeight="25.0" prefWidth="145.0" text="Exit" />
+      <Label layoutX="171.0" layoutY="15.0" prefHeight="77.0" prefWidth="168.0" text="View Weather for Melbourne &#10;at different times and graphs" textAlignment="JUSTIFY" textOverrun="CLIP" />
+      <Label layoutX="171.0" layoutY="102.0" prefHeight="77.0" prefWidth="168.0" text="View accelerated replay of &#10;weather data at different times &#10;and graphs" textAlignment="JUSTIFY" textOverrun="CLIP" />
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</AnchorPane>

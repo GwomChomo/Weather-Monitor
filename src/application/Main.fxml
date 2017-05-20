@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="577.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <effect>
+      <DropShadow />
+   </effect>
+   <children>
+      <Button fx:id="refresh" layoutX="14.0" layoutY="67.0" mnemonicParsing="false" onAction="#refreshMonitors" text="Refresh" />
+      <ComboBox fx:id="locationsMenu" layoutX="7.0" layoutY="27.0" onAction="#comboChanged" prefHeight="25.0" prefWidth="564.0" promptText="Select Location" />
+      <Button fx:id="views" layoutX="521.0" layoutY="67.0" mnemonicParsing="false" onAction="#viewWeather" text="View" />
+      <Button fx:id="remove" layoutX="496.0" layoutY="468.0" mnemonicParsing="false" onAction="#removeMonitor" prefHeight="25.0" prefWidth="72.0" text="Remove" />
+      <CheckBox fx:id="showRainfall" layoutX="113.0" layoutY="71.0" mnemonicParsing="false" text="Show Rainfall" />
+      <CheckBox fx:id="showTemperature" layoutX="225.0" layoutY="71.0" mnemonicParsing="false" text="ShowTemperature" />
+       <TableView fx:id="mainTable" layoutX="14.0" layoutY="111.0" prefHeight="350.0" prefWidth="553.0">
+        <columns>
+          <TableColumn fx:id="locationColumn" prefWidth="169.0" text="Location" />
+          <TableColumn fx:id="rainfallColumn" prefWidth="117.0" text="Rainfall" />
+            <TableColumn fx:id="temperatureColumn" minWidth="0.0" prefWidth="133.0" text="Temperature" />
+            <TableColumn fx:id="timeColumn" prefWidth="152.0" text="Time" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
