@@ -1,30 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0657273a-3a43-4041-9335-b009d6ef4b34" name="Default" comment="Stage 2 Initialize">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/application/Controller.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/application/Weather App Class Diagram.ucls" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/application/Weather.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/application/home.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/application/homeController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/connectors/Connect.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/connectors/Connector.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/connectors/MW2WeatherData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/connectors/WeatherData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/factory/CompositeMonitorFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/factory/MonitorFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/factory/SingleMonitorFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/melbourneweathertimelapse/ExceptionException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/melbourneweathertimelapse/MelbourneWeatherTimeLapseCallbackHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/melbourneweathertimelapse/MelbourneWeatherTimeLapseStub.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/melbourneweathertimelapse/TestLapse.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/monitor/CompositeMonitor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/monitor/Monitor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/monitor/RainfallMonitor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/monitor/TemperatureMonitor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/monitor/WeatherMonitor.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/Tester.java" afterPath="$PROJECT_DIR$/SE_Assignment2/test/Tester.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/Weather.java" afterPath="$PROJECT_DIR$/SE_Assignment2/test/Weather.java" />
+    <list default="true" id="0657273a-3a43-4041-9335-b009d6ef4b34" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SE_Assignment2/src/application/MainController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SE_Assignment2/src/application/WeatherMonitor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SE_Assignment2/test/Tester.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SE_Assignment2/test/Weather.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/Main.java" afterPath="$PROJECT_DIR$/src/application/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/MainController.java" afterPath="$PROJECT_DIR$/src/application/MainController.java" />
@@ -107,8 +88,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="102">
+              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -259,34 +240,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="trump-Assignments" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trump-Assignments" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trump-Assignments" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trump-Assignments" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trump-Assignments" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SE_Assignment2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -760,7 +713,7 @@
       <workItem from="1493378655959" duration="7244000" />
       <workItem from="1493469954976" duration="2428000" />
       <workItem from="1493562425379" duration="15551000" />
-      <workItem from="1495299058544" duration="1071000" />
+      <workItem from="1495299058544" duration="1211000" />
     </task>
     <task id="LOCAL-00001" summary="i just made a commeent">
       <created>1493379065936</created>
@@ -825,14 +778,22 @@
       <option name="project" value="LOCAL" />
       <updated>1495299383096</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="packages created">
+      <created>1495300205135</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1495300205135</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29672000" />
+    <option name="totallyTimeSpent" value="29812000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="20" width="1346" height="688" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -855,7 +816,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32871974" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962406" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962406" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -881,7 +842,8 @@
     <MESSAGE value="Remove Commented codes" />
     <MESSAGE value="added methods to the class diagram" />
     <MESSAGE value="Stage 2 Initialize" />
-    <option name="LAST_COMMIT_MESSAGE" value="Stage 2 Initialize" />
+    <MESSAGE value="packages created" />
+    <option name="LAST_COMMIT_MESSAGE" value="packages created" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1002,9 +964,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="26" column="96" lean-forward="false" selection-start-line="26" selection-start-column="96" selection-end-line="26" selection-end-column="96" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1053,9 +1013,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="26" column="96" lean-forward="true" selection-start-line="26" selection-start-column="96" selection-end-line="26" selection-end-column="96" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1146,9 +1104,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="26" column="96" lean-forward="false" selection-start-line="26" selection-start-column="96" selection-end-line="26" selection-end-column="96" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1224,8 +1180,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="102">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
