@@ -2,46 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0657273a-3a43-4041-9335-b009d6ef4b34" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/application/Monitor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/application/WeatherMonitor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/CompositeMonitor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/CompositeMonitorFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/Connector.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/Controller.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/Main.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/Main.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/MainController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/Monitor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/MonitorFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/RainfallMonitor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/SingleMonitorFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/TemperatureMonitor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/Weather App Class Diagram.ucls" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/Weather.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/WeatherMonitor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/application.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/home.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/homeController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/connectors/Connect.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/connectors/Connector.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/connectors/MW2WeatherData.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/connectors/WeatherData.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/factory/CompositeMonitorFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/factory/MonitorFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/factory/SingleMonitorFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/melbourneweather2/ExceptionException.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/melbourneweather2/MelbourneWeather2CallbackHandler.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/melbourneweather2/MelbourneWeather2Stub.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/melbourneweathertimelapse/ExceptionException.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/melbourneweathertimelapse/MelbourneWeatherTimeLapseCallbackHandler.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/melbourneweathertimelapse/MelbourneWeatherTimeLapseStub.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/melbourneweathertimelapse/TestLapse.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/monitor/CompositeMonitor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/monitor/Monitor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/monitor/RainfallMonitor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/monitor/TemperatureMonitor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/monitor/WeatherMonitor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/application/Main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/application/Main.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/application/MainController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/application/application.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/application/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/melbourneweather2/ExceptionException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/melbourneweather2/MelbourneWeather2CallbackHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/melbourneweather2/MelbourneWeather2Stub$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/melbourneweather2/MelbourneWeather2Stub$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/melbourneweather2/MelbourneWeather2Stub$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/melbourneweather2/MelbourneWeather2Stub$Exception$Factory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/melbourneweather2/MelbourneWeather2Stub$Exception.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/melbourneweather2/MelbourneWeather2Stub$ExceptionE$Factory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/melbourneweather2/MelbourneWeather2Stub$ExceptionE.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/melbourneweather2/MelbourneWeather2Stub$ExtensionMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/melbourneweather2/MelbourneWeather2Stub$GetLocationsResponse$Factory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/melbourneweather2/MelbourneWeather2Stub$GetLocationsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/melbourneweather2/MelbourneWeather2Stub$GetRainfall$Factory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/melbourneweather2/MelbourneWeather2Stub$GetRainfall.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/melbourneweather2/MelbourneWeather2Stub$GetRainfallResponse$Factory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/melbourneweather2/MelbourneWeather2Stub$GetRainfallResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/melbourneweather2/MelbourneWeather2Stub$GetTemperature$Factory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/melbourneweather2/MelbourneWeather2Stub$GetTemperature.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/melbourneweather2/MelbourneWeather2Stub$GetTemperatureResponse$Factory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/melbourneweather2/MelbourneWeather2Stub$GetTemperatureResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/melbourneweather2/MelbourneWeather2Stub.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/test/Tester.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/test/Weather.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -190,28 +178,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="trump-Assignments" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trump-Assignments" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trump-Assignments" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="out" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="production" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SE_Assignment2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -771,15 +737,21 @@
       <option name="project" value="LOCAL" />
       <updated>1495301602862</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Remove all">
+      <created>1495302015400</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1495302015400</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30434000" />
+    <option name="totallyTimeSpent" value="30520000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="20" width="1346" height="688" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -802,7 +774,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871974" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962406" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962406" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -854,7 +826,8 @@
     <MESSAGE value="added methods to the class diagram" />
     <MESSAGE value="Stage 2 Initialize" />
     <MESSAGE value="packages created" />
-    <option name="LAST_COMMIT_MESSAGE" value="packages created" />
+    <MESSAGE value="Remove all" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove all" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
