@@ -2,6 +2,6 @@
 
 *.iml
 
-out/
-build/
+out/*
+build/*
 
