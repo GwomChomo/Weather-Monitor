@@ -55,28 +55,28 @@ public class MainController implements Initializable{
 	@FXML
 	private CheckBox showTemperature;
 	@FXML
-	private TableView<Monitor> mainTable;
+	private TableView<application.Monitor> mainTable;
 	@FXML
-	private TableColumn<Monitor, String> locationColumn, rainfallColumn, temperatureColumn, timeColumn;
+	private TableColumn<application.Monitor, String> locationColumn, rainfallColumn, temperatureColumn, timeColumn;
 	
 
 	String choice;
 	ObservableList<String> list; 
 	
-	ObservableList<Monitor> data;
+	ObservableList<application.Monitor> data;
 	ArrayList<String> locations = new ArrayList<String>();
-	ArrayList<Monitor> monitors= new ArrayList<Monitor>();
+	ArrayList<application.Monitor> monitors= new ArrayList<application.Monitor>();
 	
 	
-	RainfallMonitor rainMonitor;
+	application.RainfallMonitor rainMonitor;
 	
 	MelbourneWeather2Stub MelbourneWeatherService; 
 	//Connector connect;
 	WeatherData connect;
-	MonitorFactory me;
+	application.MonitorFactory me;
 	
-	SingleMonitorFactory singleMonitorFactory = new SingleMonitorFactory();
-	CompositeMonitorFactory compositeMonitorFactory = new CompositeMonitorFactory();
+	application.SingleMonitorFactory singleMonitorFactory = new application.SingleMonitorFactory();
+	application.CompositeMonitorFactory compositeMonitorFactory = new application.CompositeMonitorFactory();
 	
 	PauseTransition wait = new PauseTransition(Duration.minutes(5));
 
@@ -121,7 +121,7 @@ public class MainController implements Initializable{
 	
 	
 	public void viewWeather(ActionEvent ae) throws RemoteException, ExceptionException{
-		ArrayList<Monitor> m = new ArrayList<Monitor>();
+		ArrayList<application.Monitor> m = new ArrayList<application.Monitor>();
 		if(choice!=null){
 			if(showRainfall.isSelected() && showTemperature.isSelected()  ){
 				compositeMonitorFactory.createCompositeMonitor(choice);
@@ -178,13 +178,13 @@ public class MainController implements Initializable{
 				);
 	}
 
-	public void displayMonitors(ArrayList<Monitor> m){
+	public void displayMonitors(ArrayList<application.Monitor> m){
 		data = FXCollections.observableList(m);
 		mainTable.setItems(data); 
 	}
 	
 	public void removeMonitor(ActionEvent ae){
-		ObservableList<Monitor> monitorSelected, allMonitors;
+		ObservableList<application.Monitor> monitorSelected, allMonitors;
 		allMonitors = mainTable.getItems();
 		monitorSelected = mainTable.getSelectionModel().getSelectedItems();
 		monitorSelected.forEach(allMonitors::remove);
@@ -199,11 +199,11 @@ public class MainController implements Initializable{
 	}
 	
 	public void refreshMonitors() throws RemoteException, ExceptionException{
-		ArrayList<Monitor> toUpdate = new ArrayList<>();
-		ObservableList<Monitor> currentItems;
+		ArrayList<application.Monitor> toUpdate = new ArrayList<>();
+		ObservableList<application.Monitor> currentItems;
 		currentItems = mainTable.getItems();
 		
-		for(Monitor m: currentItems){
+		for(application.Monitor m: currentItems){
 			toUpdate.add(m);
 		}
 		

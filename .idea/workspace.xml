@@ -1,14 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0657273a-3a43-4041-9335-b009d6ef4b34" name="Default" comment="added methods to the class diagram">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/application/Main.class" afterPath="$PROJECT_DIR$/out/production/SE_Assignment2/application/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/application/MainController.class" afterPath="$PROJECT_DIR$/out/production/SE_Assignment2/application/MainController.class" />
+    <list default="true" id="0657273a-3a43-4041-9335-b009d6ef4b34" name="Default" comment="Stage 2 Initialize">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/application/Controller.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/application/Weather App Class Diagram.ucls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/application/Weather.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/application/home.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/application/homeController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/connectors/Connect.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/connectors/Connector.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/connectors/MW2WeatherData.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/connectors/WeatherData.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/factory/CompositeMonitorFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/factory/MonitorFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/factory/SingleMonitorFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/melbourneweathertimelapse/ExceptionException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/melbourneweathertimelapse/MelbourneWeatherTimeLapseCallbackHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/melbourneweathertimelapse/MelbourneWeatherTimeLapseStub.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/melbourneweathertimelapse/TestLapse.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/monitor/CompositeMonitor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/monitor/Monitor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/monitor/RainfallMonitor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/monitor/TemperatureMonitor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/monitor/WeatherMonitor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/Tester.java" afterPath="$PROJECT_DIR$/SE_Assignment2/test/Tester.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/Weather.java" afterPath="$PROJECT_DIR$/SE_Assignment2/test/Weather.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SE_Assignment2/application/Main.fxml" afterPath="$PROJECT_DIR$/out/production/SE_Assignment2/application/Main.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/Main.fxml" afterPath="$PROJECT_DIR$/src/application/Main.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/Main.java" afterPath="$PROJECT_DIR$/src/application/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/MainController.java" afterPath="$PROJECT_DIR$/src/application/MainController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/Monitor.java" afterPath="$PROJECT_DIR$/src/application/Monitor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/RainfallMonitor.java" afterPath="$PROJECT_DIR$/src/application/RainfallMonitor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/TemperatureMonitor.java" afterPath="$PROJECT_DIR$/src/application/TemperatureMonitor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/WeatherMonitor.java" afterPath="$PROJECT_DIR$/src/application/WeatherMonitor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/style.css" afterPath="$PROJECT_DIR$/src/application/style.css" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -80,7 +104,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
@@ -96,21 +120,20 @@
             <state relative-caret-position="779">
               <caret line="203" column="35" lean-forward="false" selection-start-line="203" selection-start-column="35" selection-end-line="203" selection-end-column="35" />
               <folding>
-                <marker date="1494799960109" expanded="true" signature="5466:5469" ph="{...}" />
+                <marker date="1495300119583" expanded="true" signature="5682:5685" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/application/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+            <state relative-caret-position="147">
+              <caret line="24" column="44" lean-forward="false" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#643#644#0" expanded="true" />
-                <element signature="e#662#663#0" expanded="true" />
+                <element signature="e#677#678#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -249,20 +272,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="UML Diagrams" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trump-Assignments" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trump-Assignments" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -277,29 +286,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="melbourneweather2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trump-Assignments" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trump-Assignments" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
+              <option name="myItemId" value="SE_Assignment2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -310,7 +297,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -318,6 +305,10 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Gwom HP\Documents\Work\3rd Year\Sem 1\Software Engineering\Assignment2Final\trump-Assignments\src" />
+      <recent name="C:\Users\Gwom HP\Documents\Work\3rd Year\Sem 1\Software Engineering\Assignment2Final\trump-Assignments\SE_Assignment2" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Ernest Keita\trump-Assignments\UML Diagrams" />
       <recent name="C:\Users\Ernest Keita\trump-Assignments\src\application" />
@@ -769,7 +760,7 @@
       <workItem from="1493378655959" duration="7244000" />
       <workItem from="1493469954976" duration="2428000" />
       <workItem from="1493562425379" duration="15551000" />
-      <workItem from="1495299058544" duration="236000" />
+      <workItem from="1495299058544" duration="1071000" />
     </task>
     <task id="LOCAL-00001" summary="i just made a commeent">
       <created>1493379065936</created>
@@ -827,15 +818,21 @@
       <option name="project" value="LOCAL" />
       <updated>1493581183497</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Stage 2 Initialize">
+      <created>1495299383096</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1495299383096</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28837000" />
+    <option name="totallyTimeSpent" value="29672000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="20" width="1346" height="688" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -858,7 +855,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32871974" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962406" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962406" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -883,7 +880,8 @@
     <MESSAGE value="Remove Comments" />
     <MESSAGE value="Remove Commented codes" />
     <MESSAGE value="added methods to the class diagram" />
-    <option name="LAST_COMMIT_MESSAGE" value="added methods to the class diagram" />
+    <MESSAGE value="Stage 2 Initialize" />
+    <option name="LAST_COMMIT_MESSAGE" value="Stage 2 Initialize" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -948,7 +946,7 @@
         <state relative-caret-position="3009">
           <caret line="211" column="0" lean-forward="true" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
           <folding>
-            <marker date="1494799960109" expanded="true" signature="5466:5469" ph="{...}" />
+            <marker date="1495300119583" expanded="true" signature="5682:5685" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -959,8 +957,7 @@
           <caret line="21" column="12" lean-forward="false" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#643#644#0" expanded="true" />
-            <element signature="e#662#663#0" expanded="true" />
+            <element signature="e#677#678#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -970,7 +967,7 @@
         <state relative-caret-position="1632">
           <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
           <folding>
-            <marker date="1494799960109" expanded="true" signature="5466:5469" ph="{...}" />
+            <marker date="1495300119583" expanded="true" signature="5682:5685" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1001,7 +998,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/Tester.java">
+    <entry file="file://$PROJECT_DIR$/SE_Assignment2/test/Tester.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="26" column="96" lean-forward="false" selection-start-line="26" selection-start-column="96" selection-end-line="26" selection-end-column="96" />
@@ -1018,8 +1015,7 @@
           <caret line="21" column="12" lean-forward="false" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#643#644#0" expanded="true" />
-            <element signature="e#662#663#0" expanded="true" />
+            <element signature="e#677#678#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1029,7 +1025,7 @@
         <state relative-caret-position="595">
           <caret line="65" column="28" lean-forward="false" selection-start-line="65" selection-start-column="28" selection-end-line="65" selection-end-column="28" />
           <folding>
-            <marker date="1494799960109" expanded="true" signature="5466:5469" ph="{...}" />
+            <marker date="1495300119583" expanded="true" signature="5682:5685" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1053,7 +1049,7 @@
     <entry file="file://$PROJECT_DIR$/src/application/MonitorFactory.java" />
     <entry file="file://$PROJECT_DIR$/src/application/SingleMonitorFactory.java" />
     <entry file="file://$PROJECT_DIR$/src/application/CompositeMonitorFactory.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/Tester.java">
+    <entry file="file://$PROJECT_DIR$/SE_Assignment2/test/Tester.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="26" column="96" lean-forward="true" selection-start-line="26" selection-start-column="96" selection-end-line="26" selection-end-column="96" />
@@ -1069,8 +1065,7 @@
           <caret line="21" column="12" lean-forward="true" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#643#644#0" expanded="true" />
-            <element signature="e#662#663#0" expanded="true" />
+            <element signature="e#677#678#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1091,7 +1086,7 @@
         <state relative-caret-position="1003">
           <caret line="89" column="32" lean-forward="true" selection-start-line="89" selection-start-column="32" selection-end-line="89" selection-end-column="32" />
           <folding>
-            <marker date="1494799960109" expanded="true" signature="5466:5469" ph="{...}" />
+            <marker date="1495300119583" expanded="true" signature="5682:5685" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1147,7 +1142,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/Tester.java">
+    <entry file="file://$PROJECT_DIR$/SE_Assignment2/test/Tester.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="26" column="96" lean-forward="false" selection-start-line="26" selection-start-column="96" selection-end-line="26" selection-end-column="96" />
@@ -1206,6 +1201,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="779">
+          <caret line="203" column="35" lean-forward="false" selection-start-line="203" selection-start-column="35" selection-end-line="203" selection-end-column="35" />
+          <folding>
+            <marker date="1495300119583" expanded="true" signature="5682:5685" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="24" column="44" lean-forward="false" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#677#678#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1214,27 +1230,93 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="203" column="35" lean-forward="false" selection-start-line="203" selection-start-column="35" selection-end-line="203" selection-end-column="35" />
-          <folding>
-            <marker date="1494799960109" expanded="true" signature="5466:5469" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#643#644#0" expanded="true" />
-            <element signature="e#662#663#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Web</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>SE_Assignment2</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>lib</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
