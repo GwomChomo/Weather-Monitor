@@ -20,7 +20,7 @@ public class homeController {
 	@FXML
 	public void melbButtonHandler(ActionEvent event) {
 		try {
-			FXMLLoader fxmlLoader = new FXMLLoader (getClass().getResource("/SE_Assignment2/application/Main.fxml"));
+			FXMLLoader fxmlLoader = new FXMLLoader (getClass().getResource("/application/Main.fxml"));
 			Parent root = (Parent) fxmlLoader.load();
 			Stage stage = new Stage();
 			stage.setTitle("Melbourne Weather");
