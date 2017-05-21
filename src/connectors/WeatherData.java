@@ -14,6 +14,8 @@ public abstract class WeatherData extends Connect {
 		}
 
 		public abstract ArrayList<String> getLocations();
+	public abstract String [] getTemperature(String location);
+	public abstract String [] getRainfall(String location);
 
 }
 
