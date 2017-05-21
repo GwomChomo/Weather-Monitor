@@ -50,11 +50,11 @@ public class CompositeMonitorFactory extends MonitorFactory{
 
 	}
    
-   public CompositeMonitor createCompositeMonitor(Location location, String [] rainfall, String [] temperature){
+   public CompositeMonitor createCompositeMonitor(Location location, String [] temperature, String [] rainfall){
 	  // System.out.println("Inside composite");
 	   temperatureMonitor =  createTemperatureMonitor(location, temperature);
 	   rainMonitor = createRainfallMonitor(location, rainfall);
-	   compositeMonitor = new CompositeMonitor(location, rainMonitor, temperatureMonitor);
+	   compositeMonitor = new CompositeMonitor(location, temperatureMonitor, rainMonitor);
 	   return compositeMonitor;
 
 	  //System.out.println(compositeMonitor);

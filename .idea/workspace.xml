@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0657273a-3a43-4041-9335-b009d6ef4b34" name="Default" comment="MelbourneWeather2 Controller updated">
+    <list default="true" id="0657273a-3a43-4041-9335-b009d6ef4b34" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/MainController.java" afterPath="$PROJECT_DIR$/src/application/MainController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/connectors/MW2WeatherData.java" afterPath="$PROJECT_DIR$/src/connectors/MW2WeatherData.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/connectors/WeatherData.java" afterPath="$PROJECT_DIR$/src/connectors/WeatherData.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factory/CompositeMonitorFactory.java" afterPath="$PROJECT_DIR$/src/factory/CompositeMonitorFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factory/Factory.java" afterPath="$PROJECT_DIR$/src/factory/Factory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/factory/SingleMonitorFactory.java" afterPath="$PROJECT_DIR$/src/factory/SingleMonitorFactory.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/monitor/CompositeMonitor.java" afterPath="$PROJECT_DIR$/src/monitor/CompositeMonitor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/monitor/RainfallMonitor.java" afterPath="$PROJECT_DIR$/src/monitor/RainfallMonitor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/monitor/TemperatureMonitor.java" afterPath="$PROJECT_DIR$/src/monitor/TemperatureMonitor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/subject/Location.java" afterPath="$PROJECT_DIR$/src/subject/Location.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,8 +31,8 @@
       <file leaf-file-name="MainController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/application/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="181" column="49" lean-forward="true" selection-start-line="181" selection-start-column="49" selection-end-line="181" selection-end-column="49" />
+            <state relative-caret-position="146">
+              <caret line="144" column="41" lean-forward="true" selection-start-line="144" selection-start-column="41" selection-end-line="144" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1394#1412#0" expanded="true" />
@@ -66,8 +59,8 @@
       <file leaf-file-name="CompositeMonitor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/monitor/CompositeMonitor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="16" column="56" lean-forward="true" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
+            <state relative-caret-position="221">
+              <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#808#809#0" expanded="true" />
@@ -80,8 +73,8 @@
       <file leaf-file-name="CompositeMonitorFactory.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/factory/CompositeMonitorFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="57" column="31" lean-forward="true" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
+            <state relative-caret-position="291">
+              <caret line="56" column="90" lean-forward="true" selection-start-line="56" selection-start-column="90" selection-end-line="56" selection-end-column="90" />
               <folding />
             </state>
           </provider>
@@ -90,7 +83,7 @@
       <file leaf-file-name="Location.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/subject/Location.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="357">
               <caret line="25" column="30" lean-forward="true" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -164,7 +157,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="clean" />
+        <entry key="$PROJECT_DIR$" value="UpdatedControllerMW2" />
       </map>
     </option>
   </component>
@@ -199,14 +192,14 @@
         <option value="$PROJECT_DIR$/src/factory/MonitorFactory.java" />
         <option value="$PROJECT_DIR$/src/connectors/MW2WeatherData.java" />
         <option value="$PROJECT_DIR$/src/connectors/WeatherData.java" />
-        <option value="$PROJECT_DIR$/src/factory/CompositeMonitorFactory.java" />
         <option value="$PROJECT_DIR$/src/factory/Factory.java" />
         <option value="$PROJECT_DIR$/src/monitor/RainfallMonitor.java" />
         <option value="$PROJECT_DIR$/src/subject/Location.java" />
         <option value="$PROJECT_DIR$/src/monitor/TemperatureMonitor.java" />
-        <option value="$PROJECT_DIR$/src/monitor/CompositeMonitor.java" />
         <option value="$PROJECT_DIR$/src/factory/SingleMonitorFactory.java" />
         <option value="$PROJECT_DIR$/src/application/MainController.java" />
+        <option value="$PROJECT_DIR$/src/monitor/CompositeMonitor.java" />
+        <option value="$PROJECT_DIR$/src/factory/CompositeMonitorFactory.java" />
       </list>
     </option>
   </component>
@@ -411,6 +404,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -989,11 +983,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495330076369</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="MelbourneWeather2 Controller updated">
+      <created>1495387314455</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1495387314455</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75431000" />
+    <option name="totallyTimeSpent" value="77582000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1012,12 +1013,12 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13091482" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22870663" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22870663" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16398244" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1315,14 +1316,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/factory/CompositeMonitorFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="57" column="31" lean-forward="true" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/subject/Subject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -1344,18 +1337,6 @@
         <state relative-caret-position="102">
           <caret line="6" column="41" lean-forward="true" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/monitor/CompositeMonitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="16" column="56" lean-forward="true" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#808#809#0" expanded="true" />
-            <element signature="e#830#831#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1383,9 +1364,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/factory/SingleMonitorFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="45" column="10" lean-forward="false" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/subject/Location.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="357">
           <caret line="25" column="30" lean-forward="true" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1397,18 +1386,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/factory/SingleMonitorFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/factory/CompositeMonitorFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="45" column="10" lean-forward="false" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="10" />
+        <state relative-caret-position="291">
+          <caret line="56" column="90" lean-forward="true" selection-start-line="56" selection-start-column="90" selection-end-line="56" selection-end-column="90" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/monitor/CompositeMonitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#808#809#0" expanded="true" />
+            <element signature="e#830#831#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/application/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="181" column="49" lean-forward="true" selection-start-line="181" selection-start-column="49" selection-end-line="181" selection-end-column="49" />
+        <state relative-caret-position="146">
+          <caret line="144" column="41" lean-forward="true" selection-start-line="144" selection-start-column="41" selection-end-line="144" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1394#1412#0" expanded="true" />

@@ -139,21 +139,24 @@ public class MainController extends Controller implements Initializable{
 			         *
 			        * */
                     int count = 0;
-			        for(CompositeMonitor c: compositeMonitors){
-			            if(c.getLocation().equals(choice)){
-                            count ++;
+                    if(compositeMonitors!=null){
+                        for(CompositeMonitor c: compositeMonitors){
+                            if(c.getLocation().equals(choice)){
+                                count ++;
+                            }
+                        }
+                        if(count == 0){
+                            String [] rainfall = getRainfall(choice);
+                            String [] temperature = getTemperature(choice);
+                            CompositeMonitor monitor = compositeMonitorFactory.createCompositeMonitor(location, temperature, rainfall);
+                            location.addMonitors(monitor);
+                            compositeMonitors.add(monitor);
+                        }
+                        else{
+                            System.out.println("There is a composite monitor for that location");
                         }
                     }
-			        if(count == 0){
-                        String [] rainfall = getRainfall(choice);
-                        String [] temperature = getTemperature(choice);
-                        CompositeMonitor monitor = compositeMonitorFactory.createCompositeMonitor(location, temperature, rainfall);
-                        location.addMonitors(monitor);
-                        compositeMonitors.add(monitor);
-                    }
-                    else{
-			            System.out.println("There is a composite monitor for that location");
-                    }
+
 
 			}
 			else if(showTemperature.isSelected() ){

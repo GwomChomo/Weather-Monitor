@@ -10,7 +10,7 @@ public class CompositeMonitor extends WeatherMonitor {
 	
 	
 	
-	public CompositeMonitor(Location subject, RainfallMonitor rain, TemperatureMonitor temperature){
+	public CompositeMonitor(Location subject, TemperatureMonitor temperature, RainfallMonitor rain){
 		this.subject = subject;
 		this.subject.addMonitors(this);
 		location = subject.getName();
