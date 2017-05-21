@@ -5,10 +5,14 @@ import java.util.ArrayList;
 
 import melbourneweather2.ExceptionException;
 
-public abstract class WeatherData{
-	
-		
-		//public abstract void getWeatherData(String location);	
-		public abstract ArrayList<String> getLocations() throws RemoteException, ExceptionException;
-	
+public abstract class WeatherData {
+
+
+		public void getData(String location){
+
+			getLocations();
+		}
+
+		public abstract ArrayList<String> getLocations();
+
 }

@@ -1,5 +1,6 @@
 package application;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
@@ -8,24 +9,33 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import monitor.Monitor;
 
+import java.util.ArrayList;
 
 
 public abstract class Controller {
 	@FXML
-	private Button refresh, remove, views, details;
+	public Button refresh, remove, views, details;
 	@FXML
-	private ComboBox<String> locationsMenu;
+	public ComboBox<String> locationsMenu;
 	@FXML
-	private CheckBox showRainfall;
+	public CheckBox showRainfall;
 	@FXML
-	private CheckBox showTemperature;
+	public CheckBox showTemperature;
 	@FXML
-	private TableView<Monitor> mainTable;
+	public TableView<Monitor> mainTable;
 	@FXML
-	private TableColumn<Monitor, String> locationColumn, rainfallColumn, temperatureColumn, timeColumn;
+	public TableColumn<Monitor, String> locationColumn, rainfallColumn, temperatureColumn, timeColumn;
 	
 	
-	
+
+	public abstract ArrayList<String>getLocations();
+	public abstract void comboChanged(ActionEvent ae);
+	public abstract void viewWeather(ActionEvent ae);
+	public abstract void setUpTable();
+	public abstract void displayMonitors(ArrayList<Monitor> m);
+	public abstract void removeMonitor(ActionEvent ae);
+	public abstract void refreshMonitors();
+
 	
 }
 

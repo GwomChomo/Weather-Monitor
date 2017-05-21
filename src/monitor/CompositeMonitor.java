@@ -1,13 +1,18 @@
 package monitor;
 
+import subject.Location;
+import subject.Subject;
+
 public class CompositeMonitor extends WeatherMonitor {
 	
 	String rainfall, temperature, time, location;
+	Subject subject;
 	
 	
 	
-	public CompositeMonitor(RainfallMonitor rain, TemperatureMonitor temperature){
-		location = rain.getLocation();
+	public CompositeMonitor(Location subject, RainfallMonitor rain, TemperatureMonitor temperature){
+		this.subject.addMonitors(this);
+		location = subject.getName();
 		this.temperature = temperature.getTemperature();
 		rainfall = rain.getRainfall();
 		time = rain.getTime();
@@ -44,7 +49,14 @@ public class CompositeMonitor extends WeatherMonitor {
 	public String getTime() {
 		return time;
 	}
-	
+
+	@Override
+	public void update(String rainfall, String temperature, String time) {
+		this.rainfall = rainfall;
+		this.time = time;
+		this.temperature = temperature;
+	}
+
 	public String toString(){
 		return location + " " + temperature + " " + rainfall + " " + time;
 	}

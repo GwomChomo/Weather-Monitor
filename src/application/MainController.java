@@ -41,24 +41,11 @@ import melbourneweather2.MelbourneWeather2Stub;
 import monitor.Monitor;
 import monitor.RainfallMonitor;
 import javafx.scene.control.TableColumn;
+import subject.Location;
 
 
+public class MainController extends Controller implements Initializable{
 
-
-public class MainController implements Initializable{
-	@FXML
-	private Button refresh, remove, views, details;
-	@FXML
-	private ComboBox<String> locationsMenu;
-	@FXML
-	private CheckBox showRainfall;
-	@FXML
-	private CheckBox showTemperature;
-	@FXML
-	private TableView<Monitor> mainTable;
-	@FXML
-	private TableColumn<Monitor, String> locationColumn, rainfallColumn, temperatureColumn, timeColumn;
-	
 
 	String choice;
 	ObservableList<String> list; 
@@ -68,11 +55,11 @@ public class MainController implements Initializable{
 	ArrayList<Monitor> monitors= new ArrayList<Monitor>();
 	
 	
-	RainfallMonitor rainMonitor;
+	//RainfallMonitor rainMonitor;
 	
-	MelbourneWeather2Stub MelbourneWeatherService; 
+	//MelbourneWeather2Stub MelbourneWeatherService;
 	//Connector connect;
-	WeatherData connect;
+	MW2WeatherData connect;
 	MonitorFactory me;
 	
 	SingleMonitorFactory singleMonitorFactory = new SingleMonitorFactory();
@@ -92,51 +79,67 @@ public class MainController implements Initializable{
 		}
 		 
 		 
-		 ArrayList<String> locations = new ArrayList<String>();
-		 
-		 try {
+		// ArrayList<String> locations = new ArrayList<String>();
 			locations = getLocations();
-		} catch (RemoteException e) {
-		
-			e.printStackTrace();
-		} catch (ExceptionException e) {
-
-			e.printStackTrace();
-		}
-		
 		list = FXCollections.observableArrayList(locations);
 		locationsMenu.setItems(list);
 	}
 	
-	public ArrayList<String> getLocations() throws RemoteException, ExceptionException{
-		 locations = connect.getLocations();
-		 return locations;
+	public ArrayList<String> getLocations(){
+        locations = connect.getLocations();
+		return locations;
 	}
-	
+
+
+	public String [] getTemperature(String choice){
+        String [] temperature;
+        temperature = connect.getTemperature(choice);
+        return temperature;
+    }
+
+
+    public String [] getRainfall(String choice){
+	    String [] rainfall;
+	    rainfall = connect.getRainfall(choice);
+	    return rainfall;
+    }
+
 	public void comboChanged(ActionEvent ae){
 		choice = locationsMenu.getValue();
 	}
-	
-	
-	
-	
-	public void viewWeather(ActionEvent ae) throws RemoteException, ExceptionException{
+
+	public void viewWeather(ActionEvent ae) {
 		ArrayList<Monitor> m = new ArrayList<Monitor>();
 		if(choice!=null){
 			if(showRainfall.isSelected() && showTemperature.isSelected()  ){
-				compositeMonitorFactory.createCompositeMonitor(choice);
-				monitors = compositeMonitorFactory.returnMonitors();
-				m.addAll(monitors);
+				    String [] rainfall = getRainfall(choice);
+				    String [] temperature = getTemperature(choice);
+				    Location location = new Location(choice);
+					Monitor monitor = compositeMonitorFactory.createCompositeMonitor(location, temperature, rainfall);
+					location.addMonitors(monitor);
+
+
+				//monitors = compositeMonitorFactory.returnMonitors();
+				//m.addAll(monitors);
 			}
 			else if(showTemperature.isSelected() ){
-				singleMonitorFactory.createTemperatureMonitor(choice);
-				monitors = singleMonitorFactory.returnMonitors();
-				m.addAll(monitors);
+                    String [] temperature = getTemperature(choice);
+                    Location location = new Location(choice);
+                    Monitor monitor = singleMonitorFactory.createTemperatureMonitor(location, temperature);
+                    location.addMonitors(monitor);
+					//singleMonitorFactory.createTemperatureMonitor(choice);
+
+				//monitors = singleMonitorFactory.returnMonitors();
+				//m.addAll(monitors);
 			}
 			else if(showRainfall.isSelected()){
-				singleMonitorFactory.createRainfallMonitor(choice);
-				monitors = singleMonitorFactory.returnMonitors();
-				m.addAll(monitors);
+                    String [] rainfall = getRainfall(choice);
+                    Location location = new Location(choice);
+                    Monitor monitor = singleMonitorFactory.createRainfallMonitor(location, rainfall);
+                    location.addMonitors(monitor);
+
+				//monitors = singleMonitorFactory.returnMonitors();
+				//m.addAll(monitors);
 			} 
 			if(monitors.size() == 1){
 				setUpTable();
@@ -150,13 +153,8 @@ public class MainController implements Initializable{
 	        wait.setOnFinished(new EventHandler<javafx.event.ActionEvent>(){
 	    		@Override
 	    	public void handle(javafx.event.ActionEvent event){
-	    		try {
 					refreshMonitors();
-				} catch (RemoteException e) {
-					e.printStackTrace();
-				} catch (ExceptionException e) {
-					e.printStackTrace();
-				}
+
 	    	}
 	    	});
 	}
@@ -198,16 +196,23 @@ public class MainController implements Initializable{
 		}
 	}
 	
-	public void refreshMonitors() throws RemoteException, ExceptionException{
+	public void refreshMonitors() {
+
 		ArrayList<Monitor> toUpdate = new ArrayList<>();
 		ObservableList<Monitor> currentItems;
 		currentItems = mainTable.getItems();
-		
+
 		for(Monitor m: currentItems){
 			toUpdate.add(m);
 		}
-		
-		toUpdate = ((MW2WeatherData) connect).refresh(toUpdate);
+
+		try {
+			toUpdate = ((MW2WeatherData) connect).refresh(toUpdate);
+		} catch (RemoteException e) {
+			e.printStackTrace();
+		} catch (ExceptionException e) {
+			e.printStackTrace();
+		}
 		mainTable.getItems().clear();
 		mainTable.setItems( FXCollections.observableList(toUpdate));
 		wait.playFromStart();

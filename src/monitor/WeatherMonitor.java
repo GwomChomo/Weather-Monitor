@@ -8,6 +8,5 @@ public abstract class WeatherMonitor extends Monitor{
 	
 	public abstract String getLocation();
 
-	
-	
+
 }

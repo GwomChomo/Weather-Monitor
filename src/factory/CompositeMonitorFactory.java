@@ -9,8 +9,6 @@ import java.util.ArrayList;
 
 import org.apache.axis2.AxisFault;
 
-import connectors.Connector;
-
 //import melbourneweather2.MelbourneWeather2Stub;
 
 import melbourneweather2.ExceptionException;
@@ -20,6 +18,7 @@ import monitor.CompositeMonitor;
 import monitor.Monitor;
 import monitor.RainfallMonitor;
 import monitor.TemperatureMonitor;
+import subject.Location;
 
 /**
  * Created by Ernest Keita on 4/28/2017.
@@ -33,56 +32,44 @@ public class CompositeMonitorFactory extends MonitorFactory{
 	TemperatureMonitor temperatureMonitor;
 	CompositeMonitor compositeMonitor;
 	ArrayList <CompositeMonitor> compositeMonitors = new ArrayList<CompositeMonitor>();
-	Connector connect;
 	
-	public CompositeMonitorFactory(){
-		try {
-			connect = new Connector();
-		} catch (AxisFault e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+
+
+	@Override
+	public TemperatureMonitor createTemperatureMonitor(Location location, String [] temperature){
+		temperatureMonitor = new TemperatureMonitor(location, temperature);
+		return temperatureMonitor;
+		//temperatureMonitors.add(temperatureMonitor);
+		//monitorList.add(temperatureMonitor);
 	}
-	
-	
-	
-	
+
 	@Override
-    public void createTemperatureMonitor(String location) throws RemoteException, ExceptionException {
-    	 temperatureMonitor = new TemperatureMonitor(location, connect.getTemperature(location));
-    }
-	
-	@Override
-   public void createRainfallMonitor(String location) throws RemoteException, ExceptionException{
-	   	rainMonitor = new RainfallMonitor(location, connect.getRainfall(location));
-    }
+	public RainfallMonitor createRainfallMonitor(Location location, String [] rainfall) {
+		rainMonitor = new RainfallMonitor(location, rainfall);
+		return rainMonitor;
+
+	}
    
-   public void createCompositeMonitor(String location) throws RemoteException, ExceptionException{
+   public Monitor createCompositeMonitor(Location location, String [] rainfall, String [] temperature){
 	  // System.out.println("Inside composite");
-	   createTemperatureMonitor(location);
-	   createRainfallMonitor(location);
-	   compositeMonitor = new CompositeMonitor(rainMonitor, temperatureMonitor);
+	   temperatureMonitor =  createTemperatureMonitor(location, temperature);
+	   rainMonitor = createRainfallMonitor(location, rainfall);
+	   compositeMonitor = new CompositeMonitor(location, rainMonitor, temperatureMonitor);
+	   return compositeMonitor;
+
 	  //System.out.println(compositeMonitor);
 	  // compositeMonitors.add(compositeMonitor);
-	   monitorList.add(compositeMonitor);
+	  // monitorList.add(compositeMonitor);
 	   
    }
    
    
    
    
-   public ArrayList<CompositeMonitor> getCompositeMonitors(){
+   /*public ArrayList<CompositeMonitor> getCompositeMonitors(){
    	return compositeMonitors;
-   }
+   }*/
 
 
-
-
-@Override
-public ArrayList<Monitor> returnMonitors() {
-	return monitorList;
-}
-   
-   
      
 }

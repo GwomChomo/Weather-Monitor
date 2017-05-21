@@ -4,6 +4,7 @@ package factory;
 import melbourneweather2.ExceptionException;
 
 import monitor.Monitor;
+import subject.Location;
 
 import java.rmi.RemoteException;
 import java.util.ArrayList;
@@ -23,8 +24,8 @@ public abstract class MonitorFactory {
  
     }
     
-    public abstract void  createTemperatureMonitor(String location) throws RemoteException, ExceptionException;
-    public abstract void createRainfallMonitor(String Location) throws RemoteException, ExceptionException;
-    public abstract ArrayList<Monitor> returnMonitors();
+    public abstract Monitor createTemperatureMonitor(Location location, String [] temperature);
+    public abstract Monitor createRainfallMonitor(Location location, String [] rainfall);
+    //public abstract ArrayList<Monitor> returnMonitors();
  
 }

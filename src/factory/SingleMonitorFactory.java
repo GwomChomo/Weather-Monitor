@@ -5,11 +5,11 @@ import java.util.ArrayList;
 
 import org.apache.axis2.AxisFault;
 
-import connectors.Connector;
 import melbourneweather2.ExceptionException;
 import monitor.Monitor;
 import monitor.RainfallMonitor;
 import monitor.TemperatureMonitor;
+import subject.Location;
 
 public class SingleMonitorFactory extends MonitorFactory  {
 	TemperatureMonitor temperatureMonitor;
@@ -17,31 +17,33 @@ public class SingleMonitorFactory extends MonitorFactory  {
 	ArrayList<TemperatureMonitor>temperatureMonitors = new ArrayList<TemperatureMonitor>();
 	String [] rainfall = null;
 	String [] temperature = null;
-	Connector connect;
+	//Connector connect;
 	String location;
 	
 	
-	public SingleMonitorFactory() {
+	/*public SingleMonitorFactory() {
 		 try {
 			connect = new Connector();
 		} catch (AxisFault e) {
 			e.printStackTrace();
 		}
-	}
+	}*/
 	
 
     @Override
-    public void createTemperatureMonitor(String location) throws RemoteException, ExceptionException {
-    	temperatureMonitor = new TemperatureMonitor(location, connect.getTemperature(location));
-  
-    	temperatureMonitors.add(temperatureMonitor);
-    	monitorList.add(temperatureMonitor);
+    public Monitor createTemperatureMonitor(Location location, String [] temperature){
+    	temperatureMonitor = new TemperatureMonitor(location, temperature);
+  		return temperatureMonitor;
+    	//temperatureMonitors.add(temperatureMonitor);
+    	//monitorList.add(temperatureMonitor);
     }
 
     @Override
-    public void createRainfallMonitor(String location) throws RemoteException, ExceptionException {
-    	rainMonitor = new RainfallMonitor(location, connect.getRainfall(location));
-    	monitorList.add(rainMonitor);
+    public Monitor createRainfallMonitor(Location location, String [] rainfall) {
+    	rainMonitor = new RainfallMonitor(location, rainfall);
+    	return rainMonitor;
+
+    	//monitorList.add(rainMonitor);
     }
     
     

@@ -1,11 +1,16 @@
 package monitor;
 
+import subject.Location;
+import subject.Subject;
+
 public class TemperatureMonitor extends WeatherMonitor{
 	
 	public String temperature, location, time, placeholder;
+	Subject subject;
 	
-	public TemperatureMonitor(String location, String [] temperature){
-		this.location = location;
+	public TemperatureMonitor(Location subject, String [] temperature){
+		this.subject.addMonitors(this);
+		this.location = subject.getName();
 		placeholder = "-";
 		this.temperature = temperature[TEMPERATUREINDEX];
 		this.time =temperature[TIMESTAMPINDEX];	
@@ -26,6 +31,12 @@ public class TemperatureMonitor extends WeatherMonitor{
 
 	public String getTemperature(){
 		return temperature;
+	}
+
+	@Override
+	public void update(String rainfall, String temperature, String time) {
+		this.temperature = temperature;
+		this.time = time;
 	}
 
 	@Override

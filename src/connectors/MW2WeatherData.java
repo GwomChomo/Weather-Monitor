@@ -9,6 +9,7 @@ import monitor.Monitor;
 import monitor.RainfallMonitor;
 import monitor.TemperatureMonitor;
 
+import java.lang.Exception;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -37,20 +38,32 @@ public class MW2WeatherData extends WeatherData {
 	
 	
 		 
-	public String [] getTemperature(String location) throws RemoteException, ExceptionException {
+	public String [] getTemperature(String location) {
 
     	GetTemperature TemperatureRequest = new GetTemperature();
 		 TemperatureRequest.setLocation(location);
-		 TemperatureResponse = MelbourneWeatherService.getTemperature(TemperatureRequest);
-		 temperature = TemperatureResponse.get_return();
+		try {
+			TemperatureResponse = MelbourneWeatherService.getTemperature(TemperatureRequest);
+		} catch (RemoteException e) {
+			e.printStackTrace();
+		} catch (ExceptionException e) {
+			e.printStackTrace();
+		}
+		temperature = TemperatureResponse.get_return();
 		 return temperature;
     }
 	
-	public String [] getRainfall(String location) throws RemoteException, ExceptionException{
+	public String [] getRainfall(String location){
     	GetRainfall RainfallRequest = new GetRainfall();
 		 RainfallRequest.setLocation(location);
-		 RainfallResponse = MelbourneWeatherService.getRainfall(RainfallRequest);
-		 rainfall= RainfallResponse.get_return();
+		try {
+			RainfallResponse = MelbourneWeatherService.getRainfall(RainfallRequest);
+		} catch (RemoteException e) {
+			e.printStackTrace();
+		} catch (ExceptionException e) {
+			e.printStackTrace();
+		}
+		rainfall= RainfallResponse.get_return();
 		 return rainfall;
     }
 	
@@ -88,8 +101,14 @@ public class MW2WeatherData extends WeatherData {
 		return updated;
 	}
 	
-	public ArrayList<String> getLocations() throws RemoteException, ExceptionException{
-    	LocationsResponse = MelbourneWeatherService.getLocations();
+	public ArrayList<String> getLocations(){
+		try {
+			LocationsResponse = MelbourneWeatherService.getLocations();
+		} catch (RemoteException e) {
+			e.printStackTrace();
+		} catch (ExceptionException e) {
+			e.printStackTrace();
+		}
 		locations = new ArrayList<String>(Arrays.asList(LocationsResponse.get_return()));
 		return locations;
     }
