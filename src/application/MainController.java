@@ -5,6 +5,7 @@ import java.net.URL;
 import java.rmi.RemoteException;
 
 
+import javafx.scene.control.*;
 import monitor.CompositeMonitor;
 import monitor.TemperatureMonitor;
 import org.apache.axis2.AxisFault;
@@ -27,20 +28,13 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 //import javafx.scene.Parent;
 //import javafx.scene.Scene;
-import javafx.scene.control.Button;
 
-import javafx.scene.control.ComboBox;
-
-import javafx.scene.control.CheckBox;
-
-import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.util.Duration;
 import melbourneweather2.ExceptionException;
 import melbourneweather2.MelbourneWeather2Stub;
 import monitor.Monitor;
 import monitor.RainfallMonitor;
-import javafx.scene.control.TableColumn;
 import subject.Location;
 
 
@@ -67,8 +61,9 @@ public class MainController extends Controller implements Initializable{
 	CompositeMonitorFactory compositeMonitorFactory = new CompositeMonitorFactory();
 
 	ArrayList<Location> subjects = new ArrayList<Location>();
-	
-	PauseTransition wait = new PauseTransition(Duration.minutes(5));
+    ArrayList<Monitor> allMonitors = new ArrayList<Monitor>();
+
+    PauseTransition wait = new PauseTransition(Duration.minutes(5));
 
 
 
@@ -116,6 +111,8 @@ public class MainController extends Controller implements Initializable{
 	}
 
 	public void viewWeather(ActionEvent ae) {
+
+
 	    /* if there is no subject, add the current location to the subject list, else if the subject in the list is same as the current location
 	        dont do anything. This will allow for multiple monitors in the same location.
 	     */
@@ -129,7 +126,6 @@ public class MainController extends Controller implements Initializable{
 
         }
 
-		//ArrayList<Monitor> m = new ArrayList<Monitor>();
 		if(choice!=null){
 			if(showRainfall.isSelected() && showTemperature.isSelected() ){
 
@@ -149,8 +145,9 @@ public class MainController extends Controller implements Initializable{
                             String [] rainfall = getRainfall(choice);
                             String [] temperature = getTemperature(choice);
                             CompositeMonitor monitor = compositeMonitorFactory.createCompositeMonitor(location, temperature, rainfall);
-                            location.addMonitors(monitor);
+                           // location.addMonitors(monitor);
                             compositeMonitors.add(monitor);
+                            allMonitors.add(monitor);
                         }
                         else{
                             System.out.println("There is a composite monitor for that location");
@@ -173,6 +170,7 @@ public class MainController extends Controller implements Initializable{
                         String [] temperature = getTemperature(choice);
                         TemperatureMonitor monitor= singleMonitorFactory.createTemperatureMonitor(location, temperature);
                         temperatureMonitors.add(monitor);
+                        allMonitors.add(monitor);
                     }
                     else{
                         System.out.println("There is a Temperature Monitor for that location");
@@ -193,6 +191,7 @@ public class MainController extends Controller implements Initializable{
                             String [] rainfall = getRainfall(choice);
                              RainfallMonitor  monitor= singleMonitorFactory.createRainfallMonitor(location, rainfall);
                             rainfallMonitors.add(monitor);
+                            allMonitors.add(monitor);
                         }
                         else{
                             System.out.println("There is a Rainfall Monitor for that location");
@@ -203,10 +202,12 @@ public class MainController extends Controller implements Initializable{
 
 
 
-			/*if(monitors.size() == 1){
-				setUpTable();
+			if(allMonitors.size() == 1){
+			    setUpTable();
 			}
-			displayMonitors(m);*/
+
+
+			    displayMonitors(allMonitors);
 		}
 		System.out.println("Number of subjects: " + subjects.size());
         for(Location l: subjects){
@@ -254,14 +255,45 @@ public class MainController extends Controller implements Initializable{
 		ObservableList<Monitor> monitorSelected, allMonitors;
 		allMonitors = mainTable.getItems();
 		monitorSelected = mainTable.getSelectionModel().getSelectedItems();
+		Monitor toUnsubscribe = mainTable.getSelectionModel().getSelectedItem();
+
+
+		//remove monitors from their respective lists. could have been done better
+		if(toUnsubscribe instanceof RainfallMonitor){
+            int index  = rainfallMonitors.indexOf(toUnsubscribe);
+		    rainfallMonitors.remove(index);
+        }
+        else if(toUnsubscribe instanceof TemperatureMonitor){
+            int index  = temperatureMonitors.indexOf(toUnsubscribe);
+            temperatureMonitors.remove(index);
+        }
+        else if(toUnsubscribe instanceof CompositeMonitor){
+            int index  = compositeMonitors.indexOf(toUnsubscribe);
+            compositeMonitors.remove(index);
+        }
+
+        //unsubscribe monitor
+		location.removeMonitors(toUnsubscribe);
+
+        //remove monitor from table
 		monitorSelected.forEach(allMonitors::remove);
-		
-		for(int i = 0; i<monitors.size();i++){
-			monitors.remove(monitorSelected);
+
+		//remove monitor from general monitor list
+		for(int i = 0; i<allMonitors.size();i++){
+			allMonitors.remove(toUnsubscribe);
 		}
-		
+
+		//clear all lists when table is empty
 		if(mainTable.getItems().isEmpty()){
-			monitors.clear();
+			allMonitors.clear();
+			rainfallMonitors.clear();
+			temperatureMonitors.clear();
+			compositeMonitors.clear();
+			for(Location l: subjects){
+                l.clearMonitors();
+            }
+
+			subjects.clear();
 		}
 	}
 	

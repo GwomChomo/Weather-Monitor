@@ -1,20 +1,24 @@
 package subject;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import monitor.Monitor;
 import monitor.RainfallMonitor;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Gwom HP on 5/21/2017.
  */
 public class Location extends Subject {
-    ArrayList <Monitor> monitors;
+   ArrayList <Monitor> m;
+    ObservableList<Monitor>monitors;
     private String name;
 
     public Location(String name){
         this.name = name;
-        monitors = new ArrayList<>();
+        m = new ArrayList<>();
     }
 
     public String getName(){
@@ -23,10 +27,11 @@ public class Location extends Subject {
 
     @Override
     public void addMonitors(Monitor monitor) {
-        monitors.add(monitor);
+        m.add(monitor);
+        monitors = FXCollections.observableList(m);
     }
-
-    public ArrayList<Monitor> getMonitors(){
+        //this was an arraylist
+    public ObservableList<Monitor> getMonitors(){
         return monitors;
     }
 
@@ -36,8 +41,12 @@ public class Location extends Subject {
 
     @Override
     public void removeMonitors(Monitor monitor) {
-        int index  = monitors.indexOf(monitor);
-        monitors.remove(index);
+        int index  = m.indexOf(monitor);
+        m.remove(index);
+    }
+
+    public void clearMonitors(){
+        monitors.clear();
     }
 
     @Override

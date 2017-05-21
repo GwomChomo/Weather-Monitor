@@ -16,6 +16,13 @@ public class TemperatureMonitor extends WeatherMonitor{
 		this.temperature = temperature[TEMPERATUREINDEX];
 		this.time =temperature[TIMESTAMPINDEX];	
 	}
+
+	public TemperatureMonitor(String location, String [] temperature){
+		this.location = location;
+		placeholder = "-";
+		this.temperature = temperature[TEMPERATUREINDEX];
+		this.time = temperature[TIMESTAMPINDEX];
+	}
 	
 	
 	public void setTemperature(String [] temp){

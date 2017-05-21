@@ -19,6 +19,13 @@ public class RainfallMonitor extends WeatherMonitor {
 		placeholder = "-";
 	}
 
+	public RainfallMonitor(String location, String [] rainfall){
+		this.location = location;
+		placeholder = "-";
+		this.rainfall = rainfall[RAINFALLINDEX];
+		this.time = rainfall[TIMESTAMPINDEX];
+	}
+
 	public RainfallMonitor(){
 		System.out.println("In here");
 	}

@@ -43,17 +43,34 @@ public class CompositeMonitorFactory extends MonitorFactory{
 		//monitorList.add(temperatureMonitor);
 	}
 
+	public TemperatureMonitor createTemperatureMonitor(String location, String [] temperature){
+		temperatureMonitor = new TemperatureMonitor(location, temperature);
+		return temperatureMonitor;
+		//temperatureMonitors.add(temperatureMonitor);
+		//monitorList.add(temperatureMonitor);
+	}
+
+
+
 	@Override
 	public RainfallMonitor createRainfallMonitor(Location location, String [] rainfall) {
 		rainMonitor = new RainfallMonitor(location, rainfall);
 		return rainMonitor;
 
 	}
+
+
+	public RainfallMonitor createRainfallMonitor(String location, String [] rainfall){
+		rainMonitor = new RainfallMonitor(location, rainfall);
+		return rainMonitor;
+	}
+
+
    
    public CompositeMonitor createCompositeMonitor(Location location, String [] temperature, String [] rainfall){
 	  // System.out.println("Inside composite");
-	   temperatureMonitor =  createTemperatureMonitor(location, temperature);
-	   rainMonitor = createRainfallMonitor(location, rainfall);
+	   temperatureMonitor =  createTemperatureMonitor(location.getName(), temperature);
+	   rainMonitor = createRainfallMonitor(location.getName(), rainfall);
 	   compositeMonitor = new CompositeMonitor(location, temperatureMonitor, rainMonitor);
 	   return compositeMonitor;
 
