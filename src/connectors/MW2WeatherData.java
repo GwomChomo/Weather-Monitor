@@ -30,7 +30,7 @@ public class MW2WeatherData extends WeatherData {
 	String [] temperature, rainfall;
 	//SingleMonitorFactory singleMonitor;
 	//CompositeMonitorFactory compositeMonitor;
-	ArrayList<String> locations = new ArrayList<String>();
+		ArrayList<String> locations = new ArrayList<String>();
 	
 	public MW2WeatherData() throws AxisFault{
 		MelbourneWeatherService = new MelbourneWeather2Stub();

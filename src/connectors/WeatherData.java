@@ -14,5 +14,7 @@ public abstract class WeatherData {
 		}
 
 		public abstract ArrayList<String> getLocations();
+	public abstract String [] getTemperature(String location);
+	public abstract String [] getRainfall(String location);
 
 }
