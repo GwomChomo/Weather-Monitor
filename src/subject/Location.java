@@ -1,6 +1,7 @@
 package subject;
 
 import monitor.Monitor;
+import monitor.RainfallMonitor;
 
 import java.util.ArrayList;
 
@@ -24,6 +25,14 @@ public class Location extends Subject {
     public void addMonitors(Monitor monitor) {
         monitors.add(monitor);
     }
+
+    public ArrayList<Monitor> getMonitors(){
+        return monitors;
+    }
+
+   /* public void addMonitors(RainfallMonitor monitor){
+        monitors.add(monitor);
+    }*/
 
     @Override
     public void removeMonitors(Monitor monitor) {

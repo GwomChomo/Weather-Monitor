@@ -31,7 +31,8 @@ public class SingleMonitorFactory extends MonitorFactory  {
 	
 
     @Override
-    public Monitor createTemperatureMonitor(Location location, String [] temperature){
+    public TemperatureMonitor createTemperatureMonitor(Location location, String [] temperature){
+
     	temperatureMonitor = new TemperatureMonitor(location, temperature);
   		return temperatureMonitor;
     	//temperatureMonitors.add(temperatureMonitor);
@@ -39,8 +40,12 @@ public class SingleMonitorFactory extends MonitorFactory  {
     }
 
     @Override
-    public Monitor createRainfallMonitor(Location location, String [] rainfall) {
-    	rainMonitor = new RainfallMonitor(location, rainfall);
+    public RainfallMonitor createRainfallMonitor(Location location, String [] rainfall) {
+    	Location loc = location;
+    	String [] rain  = rainfall;
+		//System.out.println("In factory");
+    	rainMonitor = new RainfallMonitor(loc, rain);
+    	System.out.println("Rainfall Monitor Object: " + rainMonitor);
     	return rainMonitor;
 
     	//monitorList.add(rainMonitor);

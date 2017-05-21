@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 import melbourneweather2.ExceptionException;
 
-public abstract class WeatherData {
+public abstract class WeatherData extends Connect {
 
 
 		public void getData(String location){
@@ -16,3 +16,4 @@ public abstract class WeatherData {
 		public abstract ArrayList<String> getLocations();
 
 }
+

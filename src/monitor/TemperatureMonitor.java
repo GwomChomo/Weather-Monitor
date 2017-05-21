@@ -9,6 +9,7 @@ public class TemperatureMonitor extends WeatherMonitor{
 	Subject subject;
 	
 	public TemperatureMonitor(Location subject, String [] temperature){
+		this.subject = subject;
 		this.subject.addMonitors(this);
 		this.location = subject.getName();
 		placeholder = "-";

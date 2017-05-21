@@ -1,6 +1,7 @@
 package factory;
 
 import monitor.Monitor;
+import monitor.TemperatureMonitor;
 import subject.Location;
 
 /**
@@ -10,8 +11,8 @@ public interface Factory {
 
 
 
-    public Monitor createTemperatureMonitor(Location location, String [] temperature);
-    public Monitor createRainfallMonitor(Location location,  String [] rainfall);
+    public TemperatureMonitor createTemperatureMonitor(Location location, String [] temperature);
+    public TemperatureMonitor createRainfallMonitor(Location location,  String [] rainfall);
 
 
 }

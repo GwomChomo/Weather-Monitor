@@ -36,8 +36,7 @@ public class MW2WeatherData extends WeatherData {
 		MelbourneWeatherService = new MelbourneWeather2Stub();
 	}
 	
-	
-		 
+
 	public String [] getTemperature(String location) {
 
     	GetTemperature TemperatureRequest = new GetTemperature();

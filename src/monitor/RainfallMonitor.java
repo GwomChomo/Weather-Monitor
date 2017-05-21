@@ -10,11 +10,17 @@ public class RainfallMonitor extends WeatherMonitor {
 	
 	
 	public RainfallMonitor(Location subject, String [] rainfall){
+		this.subject = subject;
 		this.subject.addMonitors(this);
 		this.location = subject.getName();
+		System.out.println("Monitor Location: " + location);
 		this.rainfall = rainfall [RAINFALLINDEX];
 		this.time = rainfall[TIMESTAMPINDEX];
 		placeholder = "-";
+	}
+
+	public RainfallMonitor(){
+		System.out.println("In here");
 	}
 	
 	

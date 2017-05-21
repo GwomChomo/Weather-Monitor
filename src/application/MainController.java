@@ -5,8 +5,8 @@ import java.net.URL;
 import java.rmi.RemoteException;
 
 
-
-
+import monitor.CompositeMonitor;
+import monitor.TemperatureMonitor;
 import org.apache.axis2.AxisFault;
 
 import connectors.MW2WeatherData;
@@ -45,6 +45,11 @@ import subject.Location;
 
 
 public class MainController extends Controller implements Initializable{
+    ArrayList<Location> locs = new ArrayList<>();
+    ArrayList <CompositeMonitor> compositeMonitors = new ArrayList<CompositeMonitor>();
+    ArrayList <TemperatureMonitor> temperatureMonitors = new ArrayList<TemperatureMonitor>();
+    ArrayList <RainfallMonitor> rainfallMonitors = new ArrayList<RainfallMonitor>();
+
 
 
 	String choice;
@@ -53,23 +58,23 @@ public class MainController extends Controller implements Initializable{
 	ObservableList<Monitor> data;
 	ArrayList<String> locations = new ArrayList<String>();
 	ArrayList<Monitor> monitors= new ArrayList<Monitor>();
-	
-	
-	//RainfallMonitor rainMonitor;
-	
-	//MelbourneWeather2Stub MelbourneWeatherService;
-	//Connector connect;
+
 	MW2WeatherData connect;
 	MonitorFactory me;
 	
 	SingleMonitorFactory singleMonitorFactory = new SingleMonitorFactory();
+
 	CompositeMonitorFactory compositeMonitorFactory = new CompositeMonitorFactory();
+
+	ArrayList<Location> subjects = new ArrayList<Location>();
 	
 	PauseTransition wait = new PauseTransition(Duration.minutes(5));
 
-	
-							
-	@Override
+
+
+    Location location;
+
+    @Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		 try {
 			//connect = new Connector();
@@ -105,50 +110,111 @@ public class MainController extends Controller implements Initializable{
     }
 
 	public void comboChanged(ActionEvent ae){
+
 		choice = locationsMenu.getValue();
+        location = new Location(choice);
 	}
 
 	public void viewWeather(ActionEvent ae) {
-		ArrayList<Monitor> m = new ArrayList<Monitor>();
+	    /* if there is no subject, add the current location to the subject list, else if the subject in the list is same as the current location
+	        dont do anything. This will allow for multiple monitors in the same location.
+	     */
+        if(subjects.size()<1){
+            subjects.add(location);
+        }
+        else{
+            if(!subjects.contains(location)){
+                subjects.add(location);
+            }
+
+        }
+
+		//ArrayList<Monitor> m = new ArrayList<Monitor>();
 		if(choice!=null){
-			if(showRainfall.isSelected() && showTemperature.isSelected()  ){
-				    String [] rainfall = getRainfall(choice);
-				    String [] temperature = getTemperature(choice);
-				    Location location = new Location(choice);
-					Monitor monitor = compositeMonitorFactory.createCompositeMonitor(location, temperature, rainfall);
-					location.addMonitors(monitor);
+			if(showRainfall.isSelected() && showTemperature.isSelected() ){
 
+			        /*put an if statement here to check if there is already a composite monitor for this location.
+			        * if there is, take that monitor and just add it to the list of monitors to display rather than calling the web service again.
+			        * //ArrayList <CompositeMonitor> compositemonitors = new CompositeMonitor<>();
+			         *
+			        * */
+                    int count = 0;
+			        for(CompositeMonitor c: compositeMonitors){
+			            if(c.getLocation().equals(choice)){
+                            count ++;
+                        }
+                    }
+			        if(count == 0){
+                        String [] rainfall = getRainfall(choice);
+                        String [] temperature = getTemperature(choice);
+                        CompositeMonitor monitor = compositeMonitorFactory.createCompositeMonitor(location, temperature, rainfall);
+                        location.addMonitors(monitor);
+                        compositeMonitors.add(monitor);
+                    }
+                    else{
+			            System.out.println("There is a composite monitor for that location");
+                    }
 
-				//monitors = compositeMonitorFactory.returnMonitors();
-				//m.addAll(monitors);
 			}
 			else if(showTemperature.isSelected() ){
-                    String [] temperature = getTemperature(choice);
-                    Location location = new Location(choice);
-                    Monitor monitor = singleMonitorFactory.createTemperatureMonitor(location, temperature);
-                    location.addMonitors(monitor);
-					//singleMonitorFactory.createTemperatureMonitor(choice);
+                int count = 0;
+                if (temperatureMonitors!= null){
+                    for(TemperatureMonitor r: temperatureMonitors){
+                        if(r.getLocation().equals(choice)){
 
-				//monitors = singleMonitorFactory.returnMonitors();
-				//m.addAll(monitors);
+                            count++;
+                        }
+                    }
+
+                    if (count == 0){
+                        String [] temperature = getTemperature(choice);
+                        TemperatureMonitor monitor= singleMonitorFactory.createTemperatureMonitor(location, temperature);
+                        temperatureMonitors.add(monitor);
+                    }
+                    else{
+                        System.out.println("There is a Temperature Monitor for that location");
+                    }
+                }
+
 			}
 			else if(showRainfall.isSelected()){
-                    String [] rainfall = getRainfall(choice);
-                    Location location = new Location(choice);
-                    Monitor monitor = singleMonitorFactory.createRainfallMonitor(location, rainfall);
-                    location.addMonitors(monitor);
+			        int count = 0;
+			        if (rainfallMonitors!= null){
+                           for(RainfallMonitor r: rainfallMonitors){
+                               if(r.getLocation().equals(choice)){
 
-				//monitors = singleMonitorFactory.returnMonitors();
-				//m.addAll(monitors);
-			} 
-			if(monitors.size() == 1){
+                                   count++;
+                               }
+                           }
+                        if (count == 0){
+                            String [] rainfall = getRainfall(choice);
+                             RainfallMonitor  monitor= singleMonitorFactory.createRainfallMonitor(location, rainfall);
+                            rainfallMonitors.add(monitor);
+                        }
+                        else{
+                            System.out.println("There is a Rainfall Monitor for that location");
+                        }
+                    }
+			}
+
+
+
+
+			/*if(monitors.size() == 1){
 				setUpTable();
 			}
-			displayMonitors(m);
+			displayMonitors(m);*/
 		}
+		System.out.println("Number of subjects: " + subjects.size());
+        for(Location l: subjects){
+           System.out.println("Monitors in:  " +  l.getName() + " " + l.getMonitors());
+        }
+
+
+
      
 	      
-	        wait.playFromStart();
+	       /* wait.playFromStart();
 	        
 	        wait.setOnFinished(new EventHandler<javafx.event.ActionEvent>(){
 	    		@Override
@@ -156,7 +222,7 @@ public class MainController extends Controller implements Initializable{
 					refreshMonitors();
 
 	    	}
-	    	});
+	    	});*/
 	}
 	
 	public void setUpTable(){
