@@ -31,8 +31,8 @@ public class Location extends Subject {
         monitors = FXCollections.observableList(m);
     }
         //this was an arraylist
-    public ObservableList<Monitor> getMonitors(){
-        return monitors;
+    public ArrayList<Monitor> getMonitors(){
+        return m;
     }
 
    /* public void addMonitors(RainfallMonitor monitor){
@@ -49,10 +49,10 @@ public class Location extends Subject {
         monitors.clear();
     }
 
-    @Override
-    public void notifyAllMonitors() {
+   // @Override
+    /*public void notifyAllMonitors() {
         for(Monitor m: monitors){
             m.update(rainfall, temperature, time);
         }
-    }
+    }*/
 }

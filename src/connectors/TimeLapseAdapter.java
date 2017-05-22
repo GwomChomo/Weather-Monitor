@@ -100,6 +100,4 @@ public class TimeLapseAdapter extends WeatherData {
         adaptedRainfall[1] = Double.toString(rainfall);
         return adaptedRainfall;
     }
-
-
 }

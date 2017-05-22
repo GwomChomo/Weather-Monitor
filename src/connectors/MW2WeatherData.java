@@ -15,12 +15,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import org.apache.axis2.AxisFault;
 
-//import factory.CompositeMonitorFactory;
-//import factory.SingleMonitorFactory;
-
-//import javafx.collections.ObservableList;
-
-
 public class MW2WeatherData extends WeatherData {
 	
 	GetLocationsResponse LocationsResponse;
@@ -76,24 +70,20 @@ public class MW2WeatherData extends WeatherData {
 				location = ((CompositeMonitor) m).getLocation();
 				rain = getRainfall(location);
 				temperature = getTemperature(location);
-				((CompositeMonitor) m).setRainfall(rain);
-				((CompositeMonitor) m).setTemperature(temperature);
-				((CompositeMonitor) m).setTime(temperature);
+				m.update(rain,temperature);
 				updated.add(m);
-				
 			}
 			else if(m instanceof RainfallMonitor){
 				location = ((RainfallMonitor) m).getLocation();
 				rain = getRainfall(location);
-				((RainfallMonitor) m).setRainfall(rain);
-				((RainfallMonitor) m).setTime(rain);
+				((RainfallMonitor) m).update(rain);
 				updated.add(m);
 			}
 			else {
 				location = ((TemperatureMonitor) m).getLocation();
 				temperature = getTemperature(location);
-				((TemperatureMonitor) m).setTemperature(temperature);
-				((TemperatureMonitor) m).setTime(temperature);
+				((TemperatureMonitor) m).update(temperature);
+				//((TemperatureMonitor) m).setTime(temperature);
 				updated.add(m);
 			}
 		}

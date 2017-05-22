@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 public abstract class Controller {
 	@FXML
-	public Button refresh, remove, views, details;
+	public Button refresh, remove, views, graphView;
 	@FXML
 	public ComboBox<String> locationsMenu;
 	@FXML
@@ -35,7 +35,6 @@ public abstract class Controller {
 	public abstract void displayMonitors(ArrayList<Monitor> m);
 	public abstract void removeMonitor(ActionEvent ae);
 	public abstract void refreshMonitors();
-
-	
+	public abstract void viewGraph(ActionEvent ae);
 }
 

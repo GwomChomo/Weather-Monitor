@@ -5,34 +5,29 @@ import java.net.URL;
 import java.rmi.RemoteException;
 
 
-import javafx.scene.control.*;
+import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 import monitor.CompositeMonitor;
 import monitor.TemperatureMonitor;
 import org.apache.axis2.AxisFault;
 
 import connectors.MW2WeatherData;
-//import connectors.Connector;
-import connectors.WeatherData;
 import factory.CompositeMonitorFactory;
 import factory.MonitorFactory;
 import factory.SingleMonitorFactory;
 import javafx.animation.PauseTransition;
-import javafx.event.EventHandler;
-
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-//import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-//import javafx.scene.Parent;
-//import javafx.scene.Scene;
-
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.util.Duration;
 import melbourneweather2.ExceptionException;
-import melbourneweather2.MelbourneWeather2Stub;
+
 import monitor.Monitor;
 import monitor.RainfallMonitor;
 import subject.Location;
@@ -50,18 +45,18 @@ public class MainController extends Controller implements Initializable{
 	ObservableList<String> list; 
 	
 	ObservableList<Monitor> data;
-	ArrayList<String> locations = new ArrayList<String>();
-	ArrayList<Monitor> monitors= new ArrayList<Monitor>();
+	ArrayList<String> locations = new ArrayList<>();
+	ArrayList<Monitor> monitors= new ArrayList<>();
 
 	MW2WeatherData connect;
-	MonitorFactory me;
+	//MonitorFactory me;
 	
 	SingleMonitorFactory singleMonitorFactory = new SingleMonitorFactory();
 
 	CompositeMonitorFactory compositeMonitorFactory = new CompositeMonitorFactory();
 
-	ArrayList<Location> subjects = new ArrayList<Location>();
-    ArrayList<Monitor> allMonitors = new ArrayList<Monitor>();
+	ArrayList<Location> subjects = new ArrayList<>();
+    ArrayList<Monitor> allMonitors = new ArrayList<>();
 
     PauseTransition wait = new PauseTransition(Duration.minutes(5));
 
@@ -89,7 +84,6 @@ public class MainController extends Controller implements Initializable{
         locations = connect.getLocations();
 		return locations;
 	}
-
 
 	public String [] getTemperature(String choice){
         String [] temperature;
@@ -200,8 +194,6 @@ public class MainController extends Controller implements Initializable{
 			}
 
 
-
-
 			if(allMonitors.size() == 1){
 			    setUpTable();
 			}
@@ -218,15 +210,15 @@ public class MainController extends Controller implements Initializable{
 
      
 	      
-	       /* wait.playFromStart();
+	        wait.playFromStart();
 	        
-	        wait.setOnFinished(new EventHandler<javafx.event.ActionEvent>(){
+	        wait.setOnFinished(new EventHandler<ActionEvent>(){
 	    		@Override
 	    	public void handle(javafx.event.ActionEvent event){
 					refreshMonitors();
 
 	    	}
-	    	});*/
+	    	});
 	}
 	
 	public void setUpTable(){
@@ -256,59 +248,60 @@ public class MainController extends Controller implements Initializable{
 		allMonitors = mainTable.getItems();
 		monitorSelected = mainTable.getSelectionModel().getSelectedItems();
 		Monitor toUnsubscribe = mainTable.getSelectionModel().getSelectedItem();
+		if(!mainTable.getItems().isEmpty()){
+
+			//remove monitors from their respective lists. could have been done better
+			if(toUnsubscribe instanceof RainfallMonitor){
+				int index  = rainfallMonitors.indexOf(toUnsubscribe);
+				rainfallMonitors.remove(index);
+
+			}
+			else if(toUnsubscribe instanceof TemperatureMonitor){
+				int index  = temperatureMonitors.indexOf(toUnsubscribe);
+				temperatureMonitors.remove(index);
+			}
+			else if(toUnsubscribe instanceof CompositeMonitor){
+				int index  = compositeMonitors.indexOf(toUnsubscribe);
+				compositeMonitors.remove(index);
+			}
+
+			//unsubscribe monitor
+			location.removeMonitors(toUnsubscribe);
+
+			//remove monitor from table
+			monitorSelected.forEach(allMonitors::remove);
 
 
-		//remove monitors from their respective lists. could have been done better
-		if(toUnsubscribe instanceof RainfallMonitor){
-            int index  = rainfallMonitors.indexOf(toUnsubscribe);
-		    rainfallMonitors.remove(index);
-        }
-        else if(toUnsubscribe instanceof TemperatureMonitor){
-            int index  = temperatureMonitors.indexOf(toUnsubscribe);
-            temperatureMonitors.remove(index);
-        }
-        else if(toUnsubscribe instanceof CompositeMonitor){
-            int index  = compositeMonitors.indexOf(toUnsubscribe);
-            compositeMonitors.remove(index);
-        }
+			//remove monitor from general monitor list
+			/*for(int i = 0; i<allMonitors.size();i++){
+				allMonitors.remove(toUnsubscribe);
+			}*/
 
-        //unsubscribe monitor
-		location.removeMonitors(toUnsubscribe);
+			//clear all lists when table is empty. including subjects, as no one is watching them
+			/*if(mainTable.getItems().isEmpty()){
+				if(!subjects.isEmpty()){
+					for(Location l: subjects){
+						l.clearMonitors();
+					}
+					subjects.clear();
+				}
 
-        //remove monitor from table
-		monitorSelected.forEach(allMonitors::remove);
-
-		//remove monitor from general monitor list
-		for(int i = 0; i<allMonitors.size();i++){
-			allMonitors.remove(toUnsubscribe);
+			}*/
 		}
 
-		//clear all lists when table is empty
-		if(mainTable.getItems().isEmpty()){
-			allMonitors.clear();
-			rainfallMonitors.clear();
-			temperatureMonitors.clear();
-			compositeMonitors.clear();
-			for(Location l: subjects){
-                l.clearMonitors();
-            }
-
-			subjects.clear();
-		}
 	}
 	
 	public void refreshMonitors() {
-
 		ArrayList<Monitor> toUpdate = new ArrayList<>();
 		ObservableList<Monitor> currentItems;
 		currentItems = mainTable.getItems();
 
-		for(Monitor m: currentItems){
+		for(Monitor m: currentItems){  
 			toUpdate.add(m);
 		}
 
 		try {
-			toUpdate = ((MW2WeatherData) connect).refresh(toUpdate);
+			toUpdate =connect.refresh(toUpdate);
 		} catch (RemoteException e) {
 			e.printStackTrace();
 		} catch (ExceptionException e) {
@@ -317,7 +310,38 @@ public class MainController extends Controller implements Initializable{
 		mainTable.getItems().clear();
 		mainTable.setItems( FXCollections.observableList(toUpdate));
 		wait.playFromStart();
-		
+	}
+
+	@Override
+	public void viewGraph(ActionEvent ae){
+
+		SingleMonitorGraphController s = new SingleMonitorGraphController();
+		Monitor toView;
+		toView = mainTable.getSelectionModel().getSelectedItem();
+		//System.out.println(toView);
+		if(toView!= null){
+			try {
+				FXMLLoader fxmlLoader = new FXMLLoader (getClass().getResource("/application/singleMonitorGraphController.fxml"));
+				Parent root = (Parent) fxmlLoader.load();
+				SingleMonitorGraphController controller = fxmlLoader.getController();
+
+				controller.viewGraph(toView);
+
+				Stage stage = new Stage();
+				stage.setTitle("Melbourne Weather Graph");
+				stage.setScene(new Scene(root));
+
+
+
+
+
+				stage.show();
+
+			} catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+
 	}
 }
 

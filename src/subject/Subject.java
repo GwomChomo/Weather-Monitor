@@ -16,7 +16,7 @@ public abstract class Subject {
 
     public abstract void removeMonitors(Monitor monitor);
 
-    public abstract void notifyAllMonitors();
+    //public abstract void notifyAllMonitors();
 
 }
 

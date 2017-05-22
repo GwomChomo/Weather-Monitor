@@ -3,7 +3,7 @@ package monitor;
 import subject.Location;
 import subject.Subject;
 
-public class TemperatureMonitor extends WeatherMonitor{
+public class TemperatureMonitor implements WeatherMonitor{
 	
 	public String temperature, location, time, placeholder;
 	Subject subject;
@@ -42,9 +42,15 @@ public class TemperatureMonitor extends WeatherMonitor{
 	}
 
 	@Override
-	public void update(String rainfall, String temperature, String time) {
-		this.temperature = temperature;
-		this.time = time;
+	public void update(String [] rainfall, String[] temperature) {
+
+		/*this.temperature = temperature;
+		this.time = time;*/
+	}
+
+	public void update (String [] temperature){
+		setTemperature(temperature);
+		setTime(temperature);
 	}
 
 	@Override

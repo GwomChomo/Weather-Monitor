@@ -1,10 +1,10 @@
 package monitor;
 
 
-public abstract class Monitor {
+public interface Monitor {
 	
 	
 	public abstract String getTime();
-	public abstract void update(String rainfall, String temperature, String time);
+	public abstract void update(String [] rainfall, String [] temperature);
 
 }

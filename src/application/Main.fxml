@@ -25,5 +25,6 @@
             <TableColumn fx:id="timeColumn" prefWidth="152.0" text="Time" />
         </columns>
       </TableView>
+      <Button fx:id="graphView" layoutX="16.0" layoutY="468.0" mnemonicParsing="false" onAction="#viewGraph" text="View Graph" />
    </children>
 </AnchorPane>

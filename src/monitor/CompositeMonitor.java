@@ -1,9 +1,10 @@
 package monitor;
 
+import javafx.application.Application;
 import subject.Location;
 import subject.Subject;
 
-public class CompositeMonitor extends WeatherMonitor {
+public class CompositeMonitor implements WeatherMonitor {
 	
 	String rainfall, temperature, time, location;
 	Subject subject;
@@ -52,13 +53,21 @@ public class CompositeMonitor extends WeatherMonitor {
 	}
 
 	@Override
-	public void update(String rainfall, String temperature, String time) {
-		this.rainfall = rainfall;
-		this.time = time;
-		this.temperature = temperature;
+	public void update(String [] rainfall, String [] temperature) {
+		setRainfall(rainfall);
+		setTemperature(temperature);
+		//this.rainfall = rainfall;
+		//this.time = time;
+		//this.temperature = temperature;
+	}
+
+	public void viewGraph(){
+
+
 	}
 
 	public String toString(){
 		return location + " " + temperature + " " + rainfall + " " + time;
 	}
+
 }
