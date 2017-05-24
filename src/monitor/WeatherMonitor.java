@@ -9,4 +9,5 @@ public interface WeatherMonitor extends Monitor{
 	public abstract String getLocation();
 	public abstract void view();
 
+
 }

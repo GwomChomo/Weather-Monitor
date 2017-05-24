@@ -11,8 +11,8 @@ public interface Factory {
 
 
 
-    public TemperatureMonitor createTemperatureMonitor(Location location, String [] temperature);
-    public TemperatureMonitor createRainfallMonitor(Location location,  String [] rainfall);
+    public Monitor createTemperatureMonitor(Location location, String [] temperature);
+    public Monitor createRainfallMonitor(Location location,  String [] rainfall);
 
 
 }

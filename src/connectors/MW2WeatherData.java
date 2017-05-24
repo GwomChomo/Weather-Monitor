@@ -4,10 +4,7 @@ import melbourneweather2.MelbourneWeather2Stub;
 
 import melbourneweather2.ExceptionException;
 import melbourneweather2.MelbourneWeather2Stub.*;
-import monitor.CompositeMonitor;
-import monitor.Monitor;
-import monitor.RainfallMonitor;
-import monitor.TemperatureMonitor;
+import monitor.*;
 
 import java.lang.Exception;
 import java.rmi.RemoteException;
@@ -66,7 +63,7 @@ public class MW2WeatherData extends WeatherData {
 		String [] rain, temperature;
 		String location;
 		for(Monitor m: monitor){
-			String className = m.getClass().getSimpleName();
+			/*String className = m.getClass().getSimpleName();
 			if (className.equalsIgnoreCase("CompositeMonitor")){
 				System.out.println("It is a composite Monitor");
 				location = m.getLocation();
@@ -75,7 +72,14 @@ public class MW2WeatherData extends WeatherData {
 				m.update(rain, temperature);
 				updated.add(m);
 			}
-			/*if(m instanceof CompositeMonitor){
+			else if(){
+				System.out.println("It is a Rainfall Monitor");
+				location = m.getLocation();
+				rain = getRainfall(location);
+				m.update(rain);
+				updated.add(m);
+			}*/
+			if(m instanceof CompositeMonitor){
 				location = ((CompositeMonitor) m).getLocation();
 				rain = getRainfall(location);
 				temperature = getTemperature(location);
@@ -94,7 +98,7 @@ public class MW2WeatherData extends WeatherData {
 				((TemperatureMonitor) m).update(temperature);
 				//((TemperatureMonitor) m).setTime(temperature);
 				updated.add(m);
-			}*/
+			}
 		}
 		return updated;
 	}

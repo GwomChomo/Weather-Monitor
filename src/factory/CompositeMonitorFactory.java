@@ -32,31 +32,27 @@ public class CompositeMonitorFactory extends MonitorFactory{
 	TemperatureMonitor temperatureMonitor;
 	CompositeMonitor compositeMonitor;
 	ArrayList <CompositeMonitor> compositeMonitors = new ArrayList<CompositeMonitor>();
+	ArrayList<Monitor>monitorList = new ArrayList<Monitor>();
 	
 
 
 	@Override
-	public TemperatureMonitor createTemperatureMonitor(Location location, String [] temperature){
-		temperatureMonitor = new TemperatureMonitor(location, temperature);
-		return temperatureMonitor;
-		//temperatureMonitors.add(temperatureMonitor);
-		//monitorList.add(temperatureMonitor);
+	public Monitor createTemperatureMonitor(Location location, String [] temperature){
+		return null;
 	}
 
 	public TemperatureMonitor createTemperatureMonitor(String location, String [] temperature){
 		temperatureMonitor = new TemperatureMonitor(location, temperature);
+		//monitorList.add(temperatureMonitor);
 		return temperatureMonitor;
 		//temperatureMonitors.add(temperatureMonitor);
-		//monitorList.add(temperatureMonitor);
 	}
 
 
 
 	@Override
-	public RainfallMonitor createRainfallMonitor(Location location, String [] rainfall) {
-		rainMonitor = new RainfallMonitor(location, rainfall);
-		return rainMonitor;
-
+	public Monitor createRainfallMonitor(Location location, String [] rainfall) {
+		return null;
 	}
 
 
@@ -67,16 +63,17 @@ public class CompositeMonitorFactory extends MonitorFactory{
 
 
    
-   public CompositeMonitor createCompositeMonitor(Location location, String [] temperature, String [] rainfall){
+   public Monitor createCompositeMonitor(Location location, String [] temperature, String [] rainfall){
 	  // System.out.println("Inside composite");
 	   temperatureMonitor =  createTemperatureMonitor(location.getName(), temperature);
 	   rainMonitor = createRainfallMonitor(location.getName(), rainfall);
 	   compositeMonitor = new CompositeMonitor(location, temperatureMonitor, rainMonitor);
+	   monitorList.add(compositeMonitor);
 	   return compositeMonitor;
 
 	  //System.out.println(compositeMonitor);
 	  // compositeMonitors.add(compositeMonitor);
-	  // monitorList.add(compositeMonitor);
+
 	   
    }
    
@@ -86,6 +83,10 @@ public class CompositeMonitorFactory extends MonitorFactory{
    /*public ArrayList<CompositeMonitor> getCompositeMonitors(){
    	return compositeMonitors;
    }*/
+
+	public ArrayList<Monitor> returnMonitors(){
+		return monitorList;
+	}
 
 
      
