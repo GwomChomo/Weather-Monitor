@@ -66,7 +66,7 @@ public class MW2WeatherData extends WeatherData {
 			/*String className = m.getClass().getSimpleName();
 			if (className.equalsIgnoreCase("CompositeMonitor")){
 				System.out.println("It is a composite Monitor");
-				location = m.getLocation();
+				//location = m.getLocation();
 				rain = getRainfall(location);
 				temperature = getTemperature(location);
 				m.update(rain, temperature);

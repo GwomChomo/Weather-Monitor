@@ -2,7 +2,10 @@ package connectors;
 
 import melbourneweathertimelapse.ExceptionException;
 import melbourneweathertimelapse.*;
+import monitor.CompositeMonitor;
 import monitor.Monitor;
+import monitor.RainfallMonitor;
+import monitor.TemperatureMonitor;
 import org.apache.axis2.AxisFault;
 
 import java.rmi.RemoteException;
@@ -72,7 +75,7 @@ public class TimeLapseAdapter extends WeatherData {
         String[] Weather = WeatherResponse.get_return();
         String time = Weather[0];
         double temperature = Double.parseDouble(Weather[1]);
-        temperature = temperature-273;
+        temperature = Math.round(temperature-273);
         adaptedTemperature [0]= time;
         adaptedTemperature[1] = Double.toString(temperature);
         return adaptedTemperature;
@@ -96,7 +99,7 @@ public class TimeLapseAdapter extends WeatherData {
         String[] Weather = WeatherResponse.get_return();
         String time = Weather[0];
         double rainfall = Double.parseDouble(Weather[2]);
-        rainfall = rainfall*10;
+        rainfall = Math.round(rainfall*10);
         adaptedRainfall [0]= time;
         adaptedRainfall[1] = Double.toString(rainfall);
         return adaptedRainfall;
@@ -104,7 +107,48 @@ public class TimeLapseAdapter extends WeatherData {
 
     @Override
     public ArrayList<Monitor> refresh(ArrayList<Monitor> monitor) throws RemoteException, melbourneweather2.ExceptionException {
-        return null;
+        ArrayList<Monitor> updated = new ArrayList<Monitor>();
+        String [] rain, temperature;
+        String location;
+        for(Monitor m: monitor){
+			/*String className = m.getClass().getSimpleName();
+			if (className.equalsIgnoreCase("CompositeMonitor")){
+				System.out.println("It is a composite Monitor");
+				//location = m.getLocation();
+				rain = getRainfall(location);
+				temperature = getTemperature(location);
+				m.update(rain, temperature);
+				updated.add(m);
+			}
+			else if(){
+				System.out.println("It is a Rainfall Monitor");
+				location = m.getLocation();
+				rain = getRainfall(location);
+				m.update(rain);
+				updated.add(m);
+			}*/
+            if(m instanceof CompositeMonitor){
+                location = ((CompositeMonitor) m).getLocation();
+                rain = getRainfall(location);
+                temperature = getTemperature(location);
+                m.update(rain,temperature);
+                updated.add(m);
+            }
+            else if(m instanceof RainfallMonitor){
+                location = ((RainfallMonitor) m).getLocation();
+                rain = getRainfall(location);
+                ((RainfallMonitor) m).update(rain);
+                updated.add(m);
+            }
+            else {
+                location = ((TemperatureMonitor) m).getLocation();
+                temperature = getTemperature(location);
+                ((TemperatureMonitor) m).update(temperature);
+                //((TemperatureMonitor) m).setTime(temperature);
+                updated.add(m);
+            }
+        }
+        return updated;
     }
 
 

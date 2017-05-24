@@ -42,6 +42,7 @@ public class MainController extends Controller implements Initializable{
     ArrayList <TemperatureMonitor> temperatureMonitors = new ArrayList<TemperatureMonitor>();
     ArrayList <RainfallMonitor> rainfallMonitors = new ArrayList<RainfallMonitor>();
 	SingleMonitorGraphController controller;
+	ArrayList<Monitor> m = new ArrayList<>();
 
 
 
@@ -63,7 +64,7 @@ public class MainController extends Controller implements Initializable{
 	ArrayList<Location> subjects = new ArrayList<>();
    // ArrayList<Monitor> allMonitors = new ArrayList<>();
 
-    PauseTransition wait = new PauseTransition(Duration.minutes(5));
+    PauseTransition wait = new PauseTransition(Duration.seconds(5));
 	Monitor toView;
 	int count = 0;
 
@@ -105,7 +106,7 @@ public class MainController extends Controller implements Initializable{
 	}
 
 	public void viewWeather(ActionEvent ae) {
-		ArrayList<Monitor> m = new ArrayList<>();
+
 
 		if(choice!=null){
 			if(showRainfall.isSelected() && showTemperature.isSelected()  ){
@@ -166,7 +167,8 @@ public class MainController extends Controller implements Initializable{
 	public void displayMonitors(ArrayList<Monitor> m){
 		data = FXCollections.observableList(m);
 		System.out.println(data);
-		mainTable.setItems(data); 
+		mainTable.setItems(data);
+		System.out.print(m.size());
 	}
 	
 	public void removeMonitor(ActionEvent ae){
@@ -232,7 +234,7 @@ public class MainController extends Controller implements Initializable{
 		} catch (ExceptionException e) {
 			e.printStackTrace();
 		}
-		mainTable.getItems().clear();
+		//mainTable.getItems().clear();
 		mainTable.setItems( FXCollections.observableList(toUpdate));
 		System.out.println("Hello World");
 		wait.playFromStart();
@@ -249,6 +251,7 @@ public class MainController extends Controller implements Initializable{
 
 	public void connectorChoice(String which){
 		if (which.equalsIgnoreCase("MW2Service")){
+
 			try {
 				connect = new MW2WeatherData();
 				initalizeGui();
