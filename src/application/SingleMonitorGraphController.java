@@ -31,18 +31,24 @@ public class SingleMonitorGraphController implements Initializable {
     double data;
     String timeStamp;
     XYChart.Series  series = new XYChart.Series();
+    int count = 0;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
          //viewGraph(Monitor monitor);
+
 
     }
 
     public void populateGraph(double data, String timeStamp){
         time.setLabel("Time");
-        series = new XYChart.Series();
+
         //Linechart.setAnimated(false);
         series.getData().add(new XYChart.Data(timeStamp, data));
-        Linechart.getData().addAll(series);
+        if(count == 0){
+            Linechart.getData().add(series);
+            count++;
+        }
+
 
     }
 

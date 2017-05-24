@@ -83,6 +83,7 @@ public class RainfallMonitor implements WeatherMonitor {
 
 			Stage stage = new Stage();
 			stage.setTitle("Melbourne Weather Graph");
+
 			stage.setScene(new Scene(root));
 
 

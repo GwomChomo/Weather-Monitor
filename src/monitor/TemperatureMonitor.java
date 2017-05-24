@@ -58,7 +58,8 @@ public class TemperatureMonitor implements WeatherMonitor{
 		this.time = time;*/
 	}
 
-	public void updateGraph(){
+	public void populateGraph(){
+
 	    controller.populateGraph(Double.parseDouble(temperature), time);
     }
 
@@ -66,7 +67,7 @@ public class TemperatureMonitor implements WeatherMonitor{
 		setTemperature(temperature);
 		setTime(temperature);
 		if(controller!=null){
-            updateGraph();
+            populateGraph();
         }
 
 	}

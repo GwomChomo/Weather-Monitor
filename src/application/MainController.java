@@ -322,7 +322,7 @@ public class MainController extends Controller implements Initializable{
 
 		SingleMonitorGraphController s = new SingleMonitorGraphController();
 		toView = mainTable.getSelectionModel().getSelectedItem();
-		System.out.println(toView);
+		//System.out.println(toView);
 		toView.view();
 		//System.out.println(toView);
 		/*if(toView!= null){
