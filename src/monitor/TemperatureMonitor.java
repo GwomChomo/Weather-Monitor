@@ -11,7 +11,7 @@ import subject.Subject;
 public class TemperatureMonitor implements WeatherMonitor{
 
     SingleMonitorGraphController controller;
-	public String temperature, location, time, placeholder;
+	public String temperature, location, time, placeholder, className;
 	Subject subject;
 	
 	public TemperatureMonitor(Location subject, String [] temperature){
@@ -59,8 +59,7 @@ public class TemperatureMonitor implements WeatherMonitor{
 	}
 
 	public void populateGraph(){
-
-	    controller.populateGraph(Double.parseDouble(temperature), time);
+	    controller.populateGraph(this.getClass().getSimpleName(),getLocation(), Double.parseDouble(temperature), time);
     }
 
 	public void update (String [] temperature){
@@ -77,18 +76,22 @@ public class TemperatureMonitor implements WeatherMonitor{
 		return time;
 	}
 
+
+	public String getType(){
+		return className;
+	}
+
 	public void view (){
             try {
                 FXMLLoader fxmlLoader = new FXMLLoader (getClass().getResource("/application/singleMonitorGraphController.fxml"));
                 Parent root = (Parent) fxmlLoader.load();
                 controller = fxmlLoader.getController();
-
-                controller.populateGraph(Double.parseDouble(temperature), time);
+                //System.out.println(this.getClass().getSimpleName());
+				controller.populateGraph(this.getClass().getSimpleName(),getLocation(), Double.parseDouble(temperature), time);
 
                 Stage stage = new Stage();
                 stage.setTitle("Weather Graph");
                 stage.setScene(new Scene(root));
-
 
                 stage.show();
             } catch(Exception e) {

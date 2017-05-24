@@ -78,14 +78,13 @@ public class RainfallMonitor implements WeatherMonitor {
 			FXMLLoader fxmlLoader = new FXMLLoader (getClass().getResource("/application/singleMonitorGraphController.fxml"));
 			Parent root = (Parent) fxmlLoader.load();
 			controller = fxmlLoader.getController();
-
-			controller.populateGraph(Double.parseDouble(rainfall), time);
+			//System.out.println(this.getClass().getSimpleName());
+			controller.populateGraph(this.getClass().getSimpleName(),getLocation(), Double.parseDouble(rainfall), time);
 
 			Stage stage = new Stage();
 			stage.setTitle("Melbourne Weather Graph");
 
 			stage.setScene(new Scene(root));
-
 
 			stage.show();
 		} catch(Exception e) {
@@ -97,10 +96,5 @@ public class RainfallMonitor implements WeatherMonitor {
 	public String toString(){
 		return location + " " +  rainfall + " " + placeholder + " " + time;
 	}
-	
-	
-	
-	
-	
 
 }

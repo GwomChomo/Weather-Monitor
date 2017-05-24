@@ -31,6 +31,7 @@ public class SingleMonitorGraphController implements Initializable {
     double data;
     String timeStamp;
     XYChart.Series  series = new XYChart.Series();
+    XYChart.Series  series2 = new XYChart.Series();
     int count = 0;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -39,35 +40,33 @@ public class SingleMonitorGraphController implements Initializable {
 
     }
 
-    public void populateGraph(double data, String timeStamp){
-        time.setLabel("Time");
+    public void populateGraph(String className, String location, double data, String timeStamp){
 
-        //Linechart.setAnimated(false);
+
+
+
         series.getData().add(new XYChart.Data(timeStamp, data));
-        if(count == 0){
-            Linechart.getData().add(series);
-            count++;
+        if (className.equalsIgnoreCase("RainfallMonitor") || className.equalsIgnoreCase("TemperatureMonitor")){
+            time.setLabel("Time");
+            //y.setLabel(className);
+            series.setName(className);
+            if(count == 0){
+                Linechart.getData().add(series);
+                count++;
+            }
         }
-
-
     }
 
-
-   /* public void viewGraph(Monitor monitor){
-            if(monitor instanceof RainfallMonitor){
-
-               data = Double.parseDouble (((RainfallMonitor) monitor).getRainfall());
-               timeStamp = monitor.getTime();
-               populateGraph(data, timeStamp);
-            }
-
-
-            if(monitor instanceof TemperatureMonitor){
-                data = Double.parseDouble(((TemperatureMonitor) monitor).getTemperature());
-                timeStamp = monitor.getTime();
-                populateGraph(data, timeStamp);
-            }
-    }*/
+    public void populateGraph (String className, String location, double data, double data2, String timeStamp){
+        series.getData().add(new XYChart.Data(timeStamp, data));
+        series2.getData().add(new XYChart.Data(timeStamp, data2));
+        time.setLabel("Time");
+        series.setName(className);
+        if(count == 0){
+            Linechart.getData().addAll(series, series2);
+            count++;
+        }
+    }
 
 
 }

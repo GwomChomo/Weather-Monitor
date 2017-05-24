@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0657273a-3a43-4041-9335-b009d6ef4b34" name="Default" comment="With Line graph">
+    <list default="true" id="0657273a-3a43-4041-9335-b009d6ef4b34" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/MainController.java" afterPath="$PROJECT_DIR$/src/application/MainController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/SingleMonitorGraphController.java" afterPath="$PROJECT_DIR$/src/application/SingleMonitorGraphController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/monitor/Monitor.java" afterPath="$PROJECT_DIR$/src/monitor/Monitor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/monitor/RainfallMonitor.java" afterPath="$PROJECT_DIR$/src/monitor/RainfallMonitor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/monitor/TemperatureMonitor.java" afterPath="$PROJECT_DIR$/src/monitor/TemperatureMonitor.java" />
     </list>
@@ -19,11 +19,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/application/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-85">
-              <caret line="71" column="14" lean-forward="true" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="14" />
+            <state relative-caret-position="272">
+              <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -31,11 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SingleMonitorGraphController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SingleMonitorGraphController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/application/SingleMonitorGraphController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+            <state relative-caret-position="239">
+              <caret line="65" column="56" lean-forward="true" selection-start-line="65" selection-start-column="56" selection-end-line="65" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -46,8 +46,21 @@
       <file leaf-file-name="TemperatureMonitor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/monitor/TemperatureMonitor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="833">
-              <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+            <state relative-caret-position="102">
+              <caret line="89" column="39" lean-forward="false" selection-start-line="89" selection-start-column="39" selection-end-line="89" selection-end-column="39" />
+              <folding>
+                <element signature="e#1750#1751#0" expanded="true" />
+                <element signature="e#1773#1774#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Monitor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/monitor/Monitor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -56,285 +69,9 @@
       <file leaf-file-name="RainfallMonitor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/monitor/RainfallMonitor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="92" column="9" lean-forward="true" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
+            <state relative-caret-position="824">
+              <caret line="86" column="44" lean-forward="true" selection-start-line="86" selection-start-column="44" selection-end-line="86" selection-end-column="44" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MODULES/mdl-SE_Assignment2" pinned="false" current-in-tab="false">
-        <entry file="uml://MODULES/mdl-SE_Assignment2">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>MODULES</ID>
-              <OriginalElement>mdl-SE_Assignment2</OriginalElement>
-              <nodes>
-                <node x="-29.0" y="-177.0">mdl-SE_Assignment2</node>
-              </nodes>
-              <notes />
-              <edges />
-              <settings layout="Hierarchic Group" zoom="1.0" x="-157.0" y="-23.0" />
-              <SelectedNodes>
-                <node>mdl-SE_Assignment2</node>
-              </SelectedNodes>
-              <Categories />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JAVA/application" pinned="false" current-in-tab="false">
-        <entry file="uml://JAVA/application">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>JAVA</ID>
-              <OriginalElement>application</OriginalElement>
-              <nodes>
-                <node x="-101.17632936507937" y="172.0">monitor.CompositeMonitor</node>
-                <node x="95.48049603174587" y="42.0">monitor.WeatherMonitor</node>
-                <node x="763.9395436507934" y="302.0">connectors.MW2WeatherData</node>
-                <node x="318.93954365079344" y="42.0">factory.MonitorFactory</node>
-                <node x="-36.51950396825413" y="302.0">factory.CompositeMonitorFactory</node>
-                <node x="-116.81250000000006" y="42.0">subject.Subject</node>
-                <node x="-177.5" y="302.0">subject.Location</node>
-                <node x="470.93954365079344" y="42.0">application.SingleMonitorGraphController</node>
-                <node x="-215.0" y="506.0">monitor.GraphicalMonitor</node>
-                <node x="502.0" y="561.0">application.Main</node>
-                <node x="249.98049603174587" y="172.0">monitor.TemperatureMonitor</node>
-                <node x="879.7304960317458" y="42.0">connectors.Connect</node>
-                <node x="-2.0" y="545.0">application.homeController</node>
-                <node x="220.3440476190475" y="462.0">application.MainController</node>
-                <node x="308.9804960317459" y="-48.0">monitor.Monitor</node>
-                <node x="97.98049603174587" y="172.0">monitor.RainfallMonitor</node>
-                <node x="582.0" y="480.0">factory.Factory</node>
-                <node x="868.2304960317458" y="172.0">connectors.WeatherData</node>
-                <node x="252.98049603174593" y="302.0">factory.SingleMonitorFactory</node>
-                <node x="701.9395436507934" y="42.0">application.Controller</node>
-                <node x="929.9395436507934" y="302.0">connectors.TimeLapseAdapter</node>
-                <node x="840.0" y="512.0">application.Weather</node>
-              </nodes>
-              <notes />
-              <edges>
-                <edge source="subject.Location" target="monitor.Monitor">
-                  <point x="-24.0" y="-15.0" />
-                  <point x="-153.5" y="282.0" />
-                  <point x="-135.00000000000006" y="282.0" />
-                  <point x="-135.00000000000006" y="12.0" />
-                  <point x="328.90906746031726" y="12.0" />
-                  <point x="-26.571428571428584" y="15.0" />
-                </edge>
-                <edge source="connectors.MW2WeatherData" target="connectors.WeatherData">
-                  <point x="0.0" y="-15.0" />
-                  <point x="836.9395436507934" y="282.0" />
-                  <point x="897.7304960317458" y="282.0" />
-                  <point x="-29.5" y="15.0" />
-                </edge>
-                <edge source="factory.CompositeMonitorFactory" target="monitor.TemperatureMonitor">
-                  <point x="63.333333333333314" y="-15.0" />
-                  <point x="121.81382936507919" y="272.0" />
-                  <point x="261.4804960317459" y="272.0" />
-                  <point x="-69.0" y="15.0" />
-                </edge>
-                <edge source="monitor.WeatherMonitor" target="monitor.Monitor">
-                  <point x="0.0" y="-15.0" />
-                  <point x="163.98049603174587" y="22.0" />
-                  <point x="342.1947817460316" y="22.0" />
-                  <point x="-13.285714285714278" y="15.0" />
-                </edge>
-                <edge source="monitor.RainfallMonitor" target="application.SingleMonitorGraphController">
-                  <point x="44.0" y="-15.0" />
-                  <point x="207.98049603174587" y="142.0" />
-                  <point x="497.18954365079344" y="142.0" />
-                  <point x="-78.75" y="15.0" />
-                </edge>
-                <edge source="factory.CompositeMonitorFactory" target="factory.MonitorFactory">
-                  <point x="-21.111111111111143" y="-15.0" />
-                  <point x="37.36938492063473" y="232.0" />
-                  <point x="63.29509920634911" y="232.0" />
-                  <point x="63.29509920634911" y="132.0" />
-                  <point x="351.93954365079344" y="132.0" />
-                  <point x="-33.0" y="15.0" />
-                </edge>
-                <edge source="monitor.RainfallMonitor" target="subject.Subject">
-                  <point x="-44.0" y="-15.0" />
-                  <point x="119.98049603174587" y="112.0" />
-                  <point x="-61.18750000000006" y="112.0" />
-                  <point x="11.125" y="15.0" />
-                </edge>
-                <edge source="application.MainController" target="factory.SingleMonitorFactory">
-                  <point x="9.75" y="-15.0" />
-                  <point x="295.0940476190475" y="362.0" />
-                  <point x="375.98049603174593" y="362.0" />
-                  <point x="41.0" y="15.0" />
-                </edge>
-                <edge source="monitor.RainfallMonitor" target="monitor.WeatherMonitor">
-                  <point x="0.0" y="-15.0" />
-                  <point x="0.0" y="15.0" />
-                </edge>
-                <edge source="application.MainController" target="subject.Location">
-                  <point x="-48.75" y="-15.0" />
-                  <point x="236.5940476190475" y="422.0" />
-                  <point x="-129.5" y="422.0" />
-                  <point x="0.0" y="15.0" />
-                </edge>
-                <edge source="monitor.CompositeMonitor" target="subject.Subject">
-                  <point x="-37.75" y="-15.0" />
-                  <point x="-63.42632936507937" y="152.0" />
-                  <point x="-83.43750000000006" y="152.0" />
-                  <point x="-11.125" y="15.0" />
-                </edge>
-                <edge source="connectors.TimeLapseAdapter" target="connectors.WeatherData">
-                  <point x="0.0" y="-15.0" />
-                  <point x="1004.4395436507934" y="282.0" />
-                  <point x="956.7304960317458" y="282.0" />
-                  <point x="29.5" y="15.0" />
-                </edge>
-                <edge source="factory.SingleMonitorFactory" target="monitor.RainfallMonitor">
-                  <point x="-68.33333333333331" y="-15.0" />
-                  <point x="266.64716269841256" y="252.0" />
-                  <point x="201.6947817460316" y="252.0" />
-                  <point x="37.71428571428572" y="15.0" />
-                </edge>
-                <edge source="factory.CompositeMonitorFactory" target="monitor.RainfallMonitor">
-                  <point x="42.22222222222223" y="-15.0" />
-                  <point x="100.7027182539681" y="262.0" />
-                  <point x="145.12335317460304" y="262.0" />
-                  <point x="-18.857142857142833" y="15.0" />
-                </edge>
-                <edge source="application.MainController" target="application.Controller">
-                  <point x="48.75" y="-15.0" />
-                  <point x="334.0940476190475" y="422.0" />
-                  <point x="753.4395436507934" y="422.0" />
-                  <point x="0.0" y="15.0" />
-                </edge>
-                <edge source="application.Controller" target="monitor.Monitor">
-                  <point x="0.0" y="-15.0" />
-                  <point x="753.4395436507934" y="2.0" />
-                  <point x="395.3376388888887" y="2.0" />
-                  <point x="39.85714285714289" y="15.0" />
-                </edge>
-                <edge source="factory.SingleMonitorFactory" target="factory.MonitorFactory">
-                  <point x="68.33333333333331" y="-15.0" />
-                  <point x="403.3138293650792" y="282.0" />
-                  <point x="436.43398809523796" y="282.0" />
-                  <point x="436.43398809523796" y="132.0" />
-                  <point x="417.93954365079344" y="132.0" />
-                  <point x="33.0" y="15.0" />
-                </edge>
-                <edge source="connectors.WeatherData" target="connectors.Connect">
-                  <point x="0.0" y="-15.0" />
-                  <point x="0.0" y="15.0" />
-                </edge>
-                <edge source="application.MainController" target="monitor.TemperatureMonitor">
-                  <point x="16.25" y="-15.0" />
-                  <point x="301.5940476190475" y="372.0" />
-                  <point x="486.33738095238084" y="372.0" />
-                  <point x="486.33738095238084" y="262.0" />
-                  <point x="376.4804960317458" y="262.0" />
-                  <point x="46.0" y="15.0" />
-                </edge>
-                <edge source="application.MainController" target="monitor.CompositeMonitor">
-                  <point x="-35.75" y="-15.0" />
-                  <point x="249.5940476190475" y="402.0" />
-                  <point x="-59.315396825397045" y="402.0" />
-                  <point x="-59.315396825397045" y="282.0" />
-                  <point x="-86.07632936507935" y="282.0" />
-                  <point x="-60.39999999999998" y="15.0" />
-                </edge>
-                <edge source="monitor.TemperatureMonitor" target="subject.Subject">
-                  <point x="-53.66666666666666" y="-15.0" />
-                  <point x="276.8138293650792" y="102.0" />
-                  <point x="-38.93750000000006" y="102.0" />
-                  <point x="33.375" y="15.0" />
-                </edge>
-                <edge source="monitor.TemperatureMonitor" target="application.SingleMonitorGraphController">
-                  <point x="53.666666666666686" y="-15.0" />
-                  <point x="384.14716269841256" y="152.0" />
-                  <point x="549.6895436507934" y="152.0" />
-                  <point x="-26.25" y="15.0" />
-                </edge>
-                <edge source="factory.SingleMonitorFactory" target="monitor.TemperatureMonitor">
-                  <point x="41.0" y="-15.0" />
-                  <point x="375.98049603174593" y="272.0" />
-                  <point x="353.4804960317458" y="272.0" />
-                  <point x="23.0" y="15.0" />
-                </edge>
-                <edge source="subject.Location" target="subject.Subject">
-                  <point x="24.0" y="-15.0" />
-                  <point x="-105.5" y="282.0" />
-                  <point x="-118.68750000000006" y="282.0" />
-                  <point x="-118.68750000000006" y="152.0" />
-                  <point x="-105.68750000000006" y="152.0" />
-                  <point x="-33.375" y="15.0" />
-                </edge>
-                <edge source="application.MainController" target="application.SingleMonitorGraphController">
-                  <point x="29.25" y="-15.0" />
-                  <point x="314.5940476190475" y="392.0" />
-                  <point x="605.7304960317458" y="392.0" />
-                  <point x="605.7304960317458" y="152.0" />
-                  <point x="602.1895436507934" y="152.0" />
-                  <point x="26.25" y="15.0" />
-                </edge>
-                <edge source="application.MainController" target="factory.CompositeMonitorFactory">
-                  <point x="-16.25" y="-15.0" />
-                  <point x="269.0940476190475" y="372.0" />
-                  <point x="105.98049603174587" y="372.0" />
-                  <point x="47.5" y="15.0" />
-                </edge>
-                <edge source="monitor.TemperatureMonitor" target="monitor.WeatherMonitor">
-                  <point x="0.0" y="-15.0" />
-                  <point x="330.4804960317458" y="92.0" />
-                  <point x="209.6471626984125" y="92.0" />
-                  <point x="45.66666666666663" y="15.0" />
-                </edge>
-                <edge source="factory.CompositeMonitorFactory" target="monitor.CompositeMonitor">
-                  <point x="-42.22222222222223" y="-15.0" />
-                  <point x="16.258273809523644" y="222.0" />
-                  <point x="34.72367063492061" y="222.0" />
-                  <point x="60.400000000000006" y="15.0" />
-                </edge>
-                <edge source="application.MainController" target="monitor.Monitor">
-                  <point x="-61.75" y="-15.0" />
-                  <point x="223.5940476190475" y="442.0" />
-                  <point x="-188.0" y="442.0" />
-                  <point x="-188.0" y="2.0" />
-                  <point x="315.62335317460304" y="2.0" />
-                  <point x="-39.85714285714286" y="15.0" />
-                </edge>
-                <edge source="factory.MonitorFactory" target="monitor.Monitor">
-                  <point x="33.0" y="-15.0" />
-                  <point x="417.93954365079344" y="22.0" />
-                  <point x="368.76621031746015" y="22.0" />
-                  <point x="13.285714285714278" y="15.0" />
-                </edge>
-                <edge source="monitor.CompositeMonitor" target="monitor.WeatherMonitor">
-                  <point x="37.75" y="-15.0" />
-                  <point x="12.073670634920632" y="122.0" />
-                  <point x="118.31382936507919" y="122.0" />
-                  <point x="-45.66666666666666" y="15.0" />
-                </edge>
-                <edge source="application.MainController" target="connectors.MW2WeatherData">
-                  <point x="55.25" y="-15.0" />
-                  <point x="340.5940476190475" y="432.0" />
-                  <point x="800.4395436507934" y="432.0" />
-                  <point x="-36.5" y="15.0" />
-                </edge>
-                <edge source="application.MainController" target="monitor.RainfallMonitor">
-                  <point x="-3.25" y="-15.0" />
-                  <point x="282.0940476190475" y="352.0" />
-                  <point x="215.56382936507924" y="352.0" />
-                  <point x="215.56382936507924" y="262.0" />
-                  <point x="182.83763888888876" y="262.0" />
-                  <point x="18.85714285714289" y="15.0" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="1.0" x="26.0" y="230.0" />
-              <SelectedNodes>
-                <node>connectors.TimeLapseAdapter</node>
-              </SelectedNodes>
-              <Categories />
-              <SCOPE>All</SCOPE>
-              <VISIBILITY>private</VISIBILITY>
             </state>
           </provider>
         </entry>
@@ -422,12 +159,12 @@
         <option value="$PROJECT_DIR$/src/application/singleMonitorGraphController.fxml" />
         <option value="$PROJECT_DIR$/src/application/Controller.java" />
         <option value="$PROJECT_DIR$/src/monitor/WeatherMonitor.java" />
-        <option value="$PROJECT_DIR$/src/monitor/Monitor.java" />
         <option value="$PROJECT_DIR$/src/monitor/CompositeMonitor.java" />
-        <option value="$PROJECT_DIR$/src/monitor/TemperatureMonitor.java" />
-        <option value="$PROJECT_DIR$/src/application/SingleMonitorGraphController.java" />
         <option value="$PROJECT_DIR$/src/application/MainController.java" />
+        <option value="$PROJECT_DIR$/src/monitor/Monitor.java" />
+        <option value="$PROJECT_DIR$/src/monitor/TemperatureMonitor.java" />
         <option value="$PROJECT_DIR$/src/monitor/RainfallMonitor.java" />
+        <option value="$PROJECT_DIR$/src/application/SingleMonitorGraphController.java" />
       </list>
     </option>
   </component>
@@ -1095,7 +832,7 @@
       <workItem from="1495450408176" duration="336000" />
       <workItem from="1495457013201" duration="28671000" />
       <workItem from="1495624749497" duration="11749000" />
-      <workItem from="1495639713076" duration="1554000" />
+      <workItem from="1495639713076" duration="6635000" />
     </task>
     <task id="LOCAL-00001" summary="i just made a commeent">
       <created>1493379065936</created>
@@ -1251,11 +988,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495632048442</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="With Line graph">
+      <created>1495642086098</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1495642086098</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143523000" />
+    <option name="totallyTimeSpent" value="148604000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
@@ -1547,14 +1291,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/monitor/Monitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/application/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
@@ -1582,6 +1318,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="132" column="0" lean-forward="false" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1589,24 +1326,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/SingleMonitorGraphController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/monitor/TemperatureMonitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1864,36 +1583,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="uml://MODULES/mdl-SE_Assignment2">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
           <ID>MODULES</ID>
           <OriginalElement>mdl-SE_Assignment2</OriginalElement>
           <nodes>
-            <node x="-29.0" y="-177.0">mdl-SE_Assignment2</node>
+            <node x="" y="">mdl-SE_Assignment2</node>
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="-157.0" y="-23.0" />
-          <SelectedNodes>
-            <node>mdl-SE_Assignment2</node>
-          </SelectedNodes>
+          <settings layout="Hierarchic Group" zoom="1.0" x="262.0" y="-84.5" />
+          <SelectedNodes />
           <Categories />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/monitor/TemperatureMonitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="89" column="39" lean-forward="false" selection-start-line="89" selection-start-column="39" selection-end-line="89" selection-end-column="39" />
+          <folding>
+            <element signature="e#1750#1751#0" expanded="true" />
+            <element signature="e#1773#1774#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/monitor/Monitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/monitor/RainfallMonitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="92" column="9" lean-forward="true" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
+        <state relative-caret-position="824">
+          <caret line="86" column="44" lean-forward="true" selection-start-line="86" selection-start-column="44" selection-end-line="86" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/MainController.java">
+    <entry file="file://$PROJECT_DIR$/src/application/SingleMonitorGraphController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-85">
-          <caret line="71" column="14" lean-forward="true" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="14" />
+        <state relative-caret-position="239">
+          <caret line="65" column="56" lean-forward="true" selection-start-line="65" selection-start-column="56" selection-end-line="65" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
