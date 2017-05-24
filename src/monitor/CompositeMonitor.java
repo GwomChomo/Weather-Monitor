@@ -1,6 +1,11 @@
 package monitor;
 
+import application.SingleMonitorGraphController;
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 import subject.Location;
 import subject.Subject;
 
@@ -8,6 +13,7 @@ public class CompositeMonitor implements WeatherMonitor {
 	
 	String rainfall, temperature, time, location;
 	Subject subject;
+	SingleMonitorGraphController controller;
 	
 	
 	
@@ -56,13 +62,30 @@ public class CompositeMonitor implements WeatherMonitor {
 	public void update(String [] rainfall, String [] temperature) {
 		setRainfall(rainfall);
 		setTemperature(temperature);
-		//this.rainfall = rainfall;
-		//this.time = time;
-		//this.temperature = temperature;
+		if(controller!=null){
+			populateGraph();
+		}
+	}
+
+	public void populateGraph(){
+		controller.populateGraph(this.getClass().getSimpleName(),getLocation(), Double.parseDouble(temperature), Double.parseDouble(rainfall), time);
 	}
 
 	public void view(){
+		try {
+			FXMLLoader fxmlLoader = new FXMLLoader (getClass().getResource("/application/singleMonitorGraphController.fxml"));
+			Parent root = (Parent) fxmlLoader.load();
+			controller = fxmlLoader.getController();
+			controller.populateGraph(this.getClass().getSimpleName(),getLocation(), Double.parseDouble(temperature), Double.parseDouble(rainfall), time);
 
+			Stage stage = new Stage();
+			stage.setTitle("Temperature and Rainfall at " + location);
+			stage.setScene(new Scene(root));
+
+			stage.show();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
 
 	}
 

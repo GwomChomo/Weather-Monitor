@@ -5,6 +5,8 @@ import java.net.URL;
 import java.rmi.RemoteException;
 
 
+import connectors.TimeLapseAdapter;
+import connectors.WeatherData;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -50,7 +52,8 @@ public class MainController extends Controller implements Initializable{
 	ArrayList<String> locations = new ArrayList<>();
 	ArrayList<Monitor> monitors= new ArrayList<>();
 
-	MW2WeatherData connect;
+	//MW2WeatherData connect;
+	WeatherData connect;
 	//MonitorFactory me;
 	
 	SingleMonitorFactory singleMonitorFactory = new SingleMonitorFactory();
@@ -69,20 +72,26 @@ public class MainController extends Controller implements Initializable{
 
     @Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		 try {
+		 /*try {
 			//connect = new Connector();
 			 connect = new MW2WeatherData();
 		} catch (AxisFault e) {
 			e.printStackTrace();
-		}
+		}*/
 		 
 		 
 		// ArrayList<String> locations = new ArrayList<String>();
-			locations = getLocations();
+			/*locations = getLocations();
+		list = FXCollections.observableArrayList(locations);
+		locationsMenu.setItems(list);*/
+	}
+
+	public void initalizeGui(){
+		locations = getLocations();
 		list = FXCollections.observableArrayList(locations);
 		locationsMenu.setItems(list);
 	}
-	
+
 	public ArrayList<String> getLocations(){
         locations = connect.getLocations();
 		return locations;
@@ -316,35 +325,32 @@ public class MainController extends Controller implements Initializable{
 		wait.playFromStart();
 	}
 
-
 	@Override
 	public void viewGraph(ActionEvent ae){
-
-		SingleMonitorGraphController s = new SingleMonitorGraphController();
+		//SingleMonitorGraphController s = new SingleMonitorGraphController();
 		toView = mainTable.getSelectionModel().getSelectedItem();
-		//System.out.println(toView);
 		toView.view();
-		//System.out.println(toView);
-		/*if(toView!= null){
+	}
+
+
+
+	public void connectorChoice(String which){
+		if (which.equalsIgnoreCase("MW2Service")){
 			try {
-				FXMLLoader fxmlLoader = new FXMLLoader (getClass().getResource("/application/singleMonitorGraphController.fxml"));
-				Parent root = (Parent) fxmlLoader.load();
-				controller = fxmlLoader.getController();
-
-				controller.viewGraph(toView);
-
-				Stage stage = new Stage();
-				stage.setTitle("Melbourne Weather Graph");
-				stage.setScene(new Scene(root));
-
-
-				stage.show();
-
-			} catch(Exception e) {
+				connect = new MW2WeatherData();
+				initalizeGui();
+			} catch (AxisFault e) {
 				e.printStackTrace();
 			}
-		}*/
-
+		}
+		else if(which.equalsIgnoreCase("TimeLapse")){
+			try {
+				connect = new TimeLapseAdapter();
+				initalizeGui();
+			} catch (AxisFault e) {
+				e.printStackTrace();
+			}
+		}
 	}
 
 }

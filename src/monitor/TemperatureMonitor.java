@@ -90,7 +90,7 @@ public class TemperatureMonitor implements WeatherMonitor{
 				controller.populateGraph(this.getClass().getSimpleName(),getLocation(), Double.parseDouble(temperature), time);
 
                 Stage stage = new Stage();
-                stage.setTitle("Weather Graph");
+                stage.setTitle("Temperature at " + location);
                 stage.setScene(new Scene(root));
 
                 stage.show();

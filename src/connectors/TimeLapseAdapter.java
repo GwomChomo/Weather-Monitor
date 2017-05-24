@@ -2,6 +2,7 @@ package connectors;
 
 import melbourneweathertimelapse.ExceptionException;
 import melbourneweathertimelapse.*;
+import monitor.Monitor;
 import org.apache.axis2.AxisFault;
 
 import java.rmi.RemoteException;
@@ -100,4 +101,11 @@ public class TimeLapseAdapter extends WeatherData {
         adaptedRainfall[1] = Double.toString(rainfall);
         return adaptedRainfall;
     }
+
+    @Override
+    public ArrayList<Monitor> refresh(ArrayList<Monitor> monitor) throws RemoteException, melbourneweather2.ExceptionException {
+        return null;
+    }
+
+
 }

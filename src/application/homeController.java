@@ -15,13 +15,17 @@ public class homeController {
 	private Button timelapse;
 	@FXML
 	private Button exit;
+	MainController controller;
 
 	// Event Listener on Button[#melbWeather].onAction
 	@FXML
 	public void melbButtonHandler(ActionEvent event) {
 		try {
+
 			FXMLLoader fxmlLoader = new FXMLLoader (getClass().getResource("/application/Main.fxml"));
 			Parent root = (Parent) fxmlLoader.load();
+			controller = fxmlLoader.getController();
+			controller.connectorChoice("MW2Service");
 			Stage stage = new Stage();
 			stage.setTitle("Melbourne Weather");
 			stage.setScene(new Scene(root));
@@ -34,7 +38,20 @@ public class homeController {
 	// Event Listener on Button[#timelapse].onAction
 	@FXML
 	public void timelapseButtonHandler(ActionEvent event) {
-		
+		try {
+
+			FXMLLoader fxmlLoader = new FXMLLoader (getClass().getResource("/application/Main.fxml"));
+			Parent root = (Parent) fxmlLoader.load();
+			controller = fxmlLoader.getController();
+			controller.connectorChoice("TimeLapse");
+			Stage stage = new Stage();
+			stage.setTitle("TimeLapse Service");
+			stage.setScene(new Scene(root));
+			stage.show();
+
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 	// Event Listener on Button[#exit].onAction
 	@FXML

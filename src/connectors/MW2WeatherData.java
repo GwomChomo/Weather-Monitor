@@ -66,7 +66,16 @@ public class MW2WeatherData extends WeatherData {
 		String [] rain, temperature;
 		String location;
 		for(Monitor m: monitor){
-			if(m instanceof CompositeMonitor){
+			String className = m.getClass().getSimpleName();
+			if (className.equalsIgnoreCase("CompositeMonitor")){
+				System.out.println("It is a composite Monitor");
+				location = m.getLocation();
+				rain = getRainfall(location);
+				temperature = getTemperature(location);
+				m.update(rain, temperature);
+				updated.add(m);
+			}
+			/*if(m instanceof CompositeMonitor){
 				location = ((CompositeMonitor) m).getLocation();
 				rain = getRainfall(location);
 				temperature = getTemperature(location);
@@ -85,7 +94,7 @@ public class MW2WeatherData extends WeatherData {
 				((TemperatureMonitor) m).update(temperature);
 				//((TemperatureMonitor) m).setTime(temperature);
 				updated.add(m);
-			}
+			}*/
 		}
 		return updated;
 	}
@@ -101,7 +110,4 @@ public class MW2WeatherData extends WeatherData {
 		locations = new ArrayList<String>(Arrays.asList(LocationsResponse.get_return()));
 		return locations;
     }
-	
-	
-
 }
