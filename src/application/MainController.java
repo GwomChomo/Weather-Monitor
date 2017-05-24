@@ -6,6 +6,7 @@ import java.rmi.RemoteException;
 
 
 import javafx.event.EventHandler;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -38,6 +39,7 @@ public class MainController extends Controller implements Initializable{
     ArrayList <CompositeMonitor> compositeMonitors = new ArrayList<CompositeMonitor>();
     ArrayList <TemperatureMonitor> temperatureMonitors = new ArrayList<TemperatureMonitor>();
     ArrayList <RainfallMonitor> rainfallMonitors = new ArrayList<RainfallMonitor>();
+	SingleMonitorGraphController controller;
 
 
 
@@ -58,7 +60,8 @@ public class MainController extends Controller implements Initializable{
 	ArrayList<Location> subjects = new ArrayList<>();
     ArrayList<Monitor> allMonitors = new ArrayList<>();
 
-    PauseTransition wait = new PauseTransition(Duration.minutes(5));
+    PauseTransition wait = new PauseTransition(Duration.seconds(5));
+	Monitor toView;
 
 
 
@@ -309,21 +312,24 @@ public class MainController extends Controller implements Initializable{
 		}
 		mainTable.getItems().clear();
 		mainTable.setItems( FXCollections.observableList(toUpdate));
+		System.out.println("Hello World");
 		wait.playFromStart();
 	}
+
 
 	@Override
 	public void viewGraph(ActionEvent ae){
 
 		SingleMonitorGraphController s = new SingleMonitorGraphController();
-		Monitor toView;
 		toView = mainTable.getSelectionModel().getSelectedItem();
+		System.out.println(toView);
+		toView.view();
 		//System.out.println(toView);
-		if(toView!= null){
+		/*if(toView!= null){
 			try {
 				FXMLLoader fxmlLoader = new FXMLLoader (getClass().getResource("/application/singleMonitorGraphController.fxml"));
 				Parent root = (Parent) fxmlLoader.load();
-				SingleMonitorGraphController controller = fxmlLoader.getController();
+				controller = fxmlLoader.getController();
 
 				controller.viewGraph(toView);
 
@@ -332,16 +338,14 @@ public class MainController extends Controller implements Initializable{
 				stage.setScene(new Scene(root));
 
 
-
-
-
 				stage.show();
 
 			} catch(Exception e) {
 				e.printStackTrace();
 			}
-		}
+		}*/
 
 	}
+
 }
 

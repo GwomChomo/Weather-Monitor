@@ -7,6 +7,6 @@ public interface WeatherMonitor extends Monitor{
 	 final int RAINFALLINDEX =1;
 	
 	public abstract String getLocation();
-
+	public abstract void view();
 
 }

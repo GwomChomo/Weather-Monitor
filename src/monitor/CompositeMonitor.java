@@ -61,7 +61,7 @@ public class CompositeMonitor implements WeatherMonitor {
 		//this.temperature = temperature;
 	}
 
-	public void viewGraph(){
+	public void view(){
 
 
 	}

@@ -1,10 +1,15 @@
 package monitor;
 
+import application.SingleMonitorGraphController;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 import subject.Location;
 import subject.Subject;
 
 public class RainfallMonitor implements WeatherMonitor {
-	
+	SingleMonitorGraphController controller;
 	String location, rainfall, time, placeholder;
 	Subject subject;
 	
@@ -14,6 +19,9 @@ public class RainfallMonitor implements WeatherMonitor {
 		this.subject.addMonitors(this);
 		this.location = subject.getName();
 		System.out.println("Monitor Location: " + location);
+		if(rainfall[RAINFALLINDEX].equals("-") || rainfall[RAINFALLINDEX].equalsIgnoreCase("trace")){
+				this.rainfall = "0";
+		}
 		this.rainfall = rainfall [RAINFALLINDEX];
 		this.time = rainfall[TIMESTAMPINDEX];
 		placeholder = "-";
@@ -62,6 +70,27 @@ public class RainfallMonitor implements WeatherMonitor {
 	public void update( String [] rainfall){
 		setRainfall(rainfall);
 		setTime(rainfall);
+	}
+
+
+	public void view (){
+		try {
+			FXMLLoader fxmlLoader = new FXMLLoader (getClass().getResource("/application/singleMonitorGraphController.fxml"));
+			Parent root = (Parent) fxmlLoader.load();
+			controller = fxmlLoader.getController();
+
+			controller.populateGraph(Double.parseDouble(rainfall), time);
+
+			Stage stage = new Stage();
+			stage.setTitle("Melbourne Weather Graph");
+			stage.setScene(new Scene(root));
+
+
+			stage.show();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+
 	}
 
 	public String toString(){
