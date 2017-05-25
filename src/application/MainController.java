@@ -7,6 +7,7 @@ import java.rmi.RemoteException;
 
 import connectors.TimeLapseAdapter;
 import connectors.WeatherData;
+import factory.Factory;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -45,7 +46,6 @@ public class MainController extends Controller implements Initializable{
 	ArrayList<Monitor> m = new ArrayList<>();
 
 
-
 	String choice;
 	ObservableList<String> list; 
 	
@@ -57,17 +57,18 @@ public class MainController extends Controller implements Initializable{
 	WeatherData connect;
 	//MonitorFactory me;
 	
-	SingleMonitorFactory singleMonitorFactory = new SingleMonitorFactory();
+	//SingleMonitorFactory singleMonitorFactory = new SingleMonitorFactory();
+	MonitorFactory singleMonitorFactory = new SingleMonitorFactory();
 
-	CompositeMonitorFactory compositeMonitorFactory = new CompositeMonitorFactory();
+	//CompositeMonitorFactory compositeMonitorFactory = new CompositeMonitorFactory();
+	MonitorFactory compositeMonitorFactory = new CompositeMonitorFactory();
 
-	ArrayList<Location> subjects = new ArrayList<>();
+	//ArrayList<Location> subjects = new ArrayList<>();
    // ArrayList<Monitor> allMonitors = new ArrayList<>();
 
     PauseTransition wait = new PauseTransition(Duration.seconds(5));
 	Monitor toView;
 	int count = 0;
-
 
 
     Location location;
@@ -113,14 +114,11 @@ public class MainController extends Controller implements Initializable{
 				String [] rainfall = getRainfall(choice);
 				String [] temperature = getTemperature(choice);
 				m.add(compositeMonitorFactory.createCompositeMonitor(new Location(choice), temperature, rainfall));
-				//monitors = compositeMonitorFactory.returnMonitors();
-				//m.addAll(monitors);
+
 			}
 			else if(showTemperature.isSelected() ){
 				String [] temperature = getTemperature(choice);
 				m.add(singleMonitorFactory.createTemperatureMonitor(new Location(choice), temperature));
-				//monitors = singleMonitorFactory.returnMonitors();
-				//m.addAll(monitors);
 			}
 			else if(showRainfall.isSelected()){
 				String [] rainfall = getRainfall(choice);
@@ -173,31 +171,14 @@ public class MainController extends Controller implements Initializable{
 	
 	public void removeMonitor(ActionEvent ae){
 		ObservableList<Monitor> monitorSelected, allMonitors;
+		Monitor selected;
 		allMonitors = mainTable.getItems();
-		monitorSelected = mainTable.getSelectionModel().getSelectedItems();
+		selected = mainTable.getSelectionModel().getSelectedItem();
 		Monitor toUnsubscribe = mainTable.getSelectionModel().getSelectedItem();
 		if(!mainTable.getItems().isEmpty()){
-
-			//remove monitors from their respective lists. could have been done better
-			if(toUnsubscribe instanceof RainfallMonitor){
-				int index  = rainfallMonitors.indexOf(toUnsubscribe);
-				rainfallMonitors.remove(index);
-			}
-			else if(toUnsubscribe instanceof TemperatureMonitor){
-				int index  = temperatureMonitors.indexOf(toUnsubscribe);
-				temperatureMonitors.remove(index);
-			}
-			else if(toUnsubscribe instanceof CompositeMonitor){
-				int index  = compositeMonitors.indexOf(toUnsubscribe);
-				compositeMonitors.remove(index);
-			}
-
-			//unsubscribe monitor
-			location.removeMonitors(toUnsubscribe);
-
-			//remove monitor from table
-			monitorSelected.forEach(allMonitors::remove);
-
+			mainTable.getItems().remove(selected);
+			int index = m.indexOf(selected);
+			m.remove(index);
 		}
 
 	}

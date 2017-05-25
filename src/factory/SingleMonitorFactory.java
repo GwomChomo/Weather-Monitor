@@ -43,11 +43,15 @@ public class SingleMonitorFactory extends MonitorFactory  {
 		monitorList.add(rainMonitor);
 		return rainMonitor;
     	//return rainMonitor;
-
-
     }
 
-    public ArrayList<Monitor> returnMonitors(){
+	@Override
+	public Monitor createCompositeMonitor(Location location, String[] temperature, String[] rainfall) {
+		return null;
+	}
+
+
+	public ArrayList<Monitor> returnMonitors(){
     	return monitorList;
     }
     

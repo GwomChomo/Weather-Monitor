@@ -26,6 +26,7 @@ public abstract class MonitorFactory {
     
     public abstract Monitor createTemperatureMonitor(Location location, String [] temperature);
     public abstract Monitor createRainfallMonitor(Location location, String [] rainfall);
+    public abstract Monitor createCompositeMonitor(Location location, String [] temperature, String [] rainfall);
     //public abstract ArrayList<Monitor> returnMonitors();
  
 }
