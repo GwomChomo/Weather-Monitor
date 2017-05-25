@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0657273a-3a43-4041-9335-b009d6ef4b34" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UML Diagrams/Melbourne Weather.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UML Diagrams/Sequence Diagrams/1.Select Service.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UML Diagrams/Sequence Diagrams/2. Create Single Weather Monitor.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UML Diagrams/Sequence Diagrams/3. Create Double Weather Monitor.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UML Diagrams/Sequence Diagrams/4. Refresh data after 5 minutes.pdf" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/UML Diagrams/Create Double Weather Monitor.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/UML Diagrams/Create Single Weather Monitor.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/UML Diagrams/Melbourne Weather.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/UML Diagrams/Refresh data after 5 minutes.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/UML Diagrams/Remove Monitor.jpg" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Design Report/Software Engineering Report.docx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -28,8 +19,8 @@
       <file leaf-file-name="MainController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/application/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="207" column="44" lean-forward="false" selection-start-line="207" selection-start-column="44" selection-end-line="207" selection-end-column="44" />
+            <state relative-caret-position="75">
+              <caret line="200" column="9" lean-forward="false" selection-start-line="200" selection-start-column="9" selection-end-line="200" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -299,20 +290,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trump-Assignments" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trump-Assignments" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UML Diagrams" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -334,6 +311,7 @@
       <recent name="C:\Users\Ernest Keita\trump-Assignments\src\application" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Ernest Keita\Documents\SoftwareEngineering\trump-Assignments\Design Report" />
       <recent name="C:\Users\Gwom HP\Documents\Work\3rd Year\Sem 1\Software Engineering\Assignment2Final\trump-Assignments\src" />
       <recent name="C:\Users\Gwom HP\Documents\Work\3rd Year\Sem 1\Software Engineering\Assignment2Final\trump-Assignments\SE_Assignment2" />
     </key>
@@ -799,7 +777,7 @@
       <workItem from="1495639713076" duration="11063000" />
       <workItem from="1495655357702" duration="7558000" />
       <workItem from="1495663535074" duration="9930000" />
-      <workItem from="1495676671657" duration="60000" />
+      <workItem from="1495676671657" duration="309000" />
     </task>
     <task id="LOCAL-00001" summary="i just made a commeent">
       <created>1493379065936</created>
@@ -983,11 +961,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495666425328</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Uml Files">
+      <created>1495676745945</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1495676745945</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="170580000" />
+    <option name="totallyTimeSpent" value="170829000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1370" height="735" extended-state="0" />
@@ -1081,7 +1066,8 @@
     <MESSAGE value="Added First Graph" />
     <MESSAGE value="With Line graph" />
     <MESSAGE value="Some Bug Fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some Bug Fixes" />
+    <MESSAGE value="Uml Files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Uml Files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1610,8 +1596,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/application/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="207" column="44" lean-forward="false" selection-start-line="207" selection-start-column="44" selection-end-line="207" selection-end-column="44" />
+        <state relative-caret-position="75">
+          <caret line="200" column="9" lean-forward="false" selection-start-line="200" selection-start-column="9" selection-end-line="200" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
