@@ -111,37 +111,21 @@ public class TimeLapseAdapter extends WeatherData {
         String [] rain, temperature;
         String location;
         for(Monitor m: monitor){
-			/*String className = m.getClass().getSimpleName();
-			if (className.equalsIgnoreCase("CompositeMonitor")){
-				System.out.println("It is a composite Monitor");
-				//location = m.getLocation();
-				rain = getRainfall(location);
-				temperature = getTemperature(location);
-				m.update(rain, temperature);
-				updated.add(m);
-			}
-			else if(){
-				System.out.println("It is a Rainfall Monitor");
-				location = m.getLocation();
-				rain = getRainfall(location);
-				m.update(rain);
-				updated.add(m);
-			}*/
             if(m instanceof CompositeMonitor){
-                location = ((CompositeMonitor) m).getLocation();
+                location = m.getLocation();
                 rain = getRainfall(location);
                 temperature = getTemperature(location);
-                m.update(rain,temperature);
+                ((CompositeMonitor) m).update(rain, temperature);
                 updated.add(m);
             }
             else if(m instanceof RainfallMonitor){
-                location = ((RainfallMonitor) m).getLocation();
+                location = m.getLocation();
                 rain = getRainfall(location);
                 ((RainfallMonitor) m).update(rain);
                 updated.add(m);
             }
             else {
-                location = ((TemperatureMonitor) m).getLocation();
+                location = m.getLocation();
                 temperature = getTemperature(location);
                 ((TemperatureMonitor) m).update(temperature);
                 //((TemperatureMonitor) m).setTime(temperature);

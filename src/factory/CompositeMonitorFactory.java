@@ -32,7 +32,7 @@ public class CompositeMonitorFactory extends MonitorFactory{
 	TemperatureMonitor temperatureMonitor;
 	CompositeMonitor compositeMonitor;
 	ArrayList <CompositeMonitor> compositeMonitors = new ArrayList<CompositeMonitor>();
-	ArrayList<Monitor>monitorList = new ArrayList<Monitor>();
+	//ArrayList<Monitor>monitorList = new ArrayList<Monitor>();
 	
 
 
@@ -68,7 +68,7 @@ public class CompositeMonitorFactory extends MonitorFactory{
 	   temperatureMonitor =  createTemperatureMonitor(location.getName(), temperature);
 	   rainMonitor = createRainfallMonitor(location.getName(), rainfall);
 	   compositeMonitor = new CompositeMonitor(location, temperatureMonitor, rainMonitor);
-	   monitorList.add(compositeMonitor);
+	   //monitorList.add(compositeMonitor);
 	   return compositeMonitor;
 
 	  //System.out.println(compositeMonitor);

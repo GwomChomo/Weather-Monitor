@@ -51,12 +51,12 @@ public class TemperatureMonitor implements WeatherMonitor{
 		return temperature;
 	}
 
-	@Override
-	public void update(String [] rainfall, String[] temperature) {
+	//@Override
+	/*public void update(String [] rainfall, String[] temperature) {
 
 		/*this.temperature = temperature;
-		this.time = time;*/
-	}
+		this.time = time;
+	}*/
 
 	public void populateGraph(){
 	    controller.populateGraph(this.getClass().getSimpleName(),getLocation(), Double.parseDouble(temperature), time);

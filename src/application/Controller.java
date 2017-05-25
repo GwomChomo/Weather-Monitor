@@ -33,7 +33,7 @@ public abstract class Controller {
 	public abstract void viewWeather(ActionEvent ae);
 	public abstract void setUpTable();
 	public abstract void displayMonitors(ArrayList<Monitor> m);
-	public abstract void removeMonitor(ActionEvent ae);
+	//public abstract void removeMonitor(ActionEvent ae);
 	public abstract void refreshMonitors();
 	public abstract void viewGraph(ActionEvent ae);
 }

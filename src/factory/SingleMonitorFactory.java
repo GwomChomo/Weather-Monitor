@@ -15,7 +15,7 @@ public class SingleMonitorFactory extends MonitorFactory  {
 	TemperatureMonitor temperatureMonitor;
 	RainfallMonitor rainMonitor;
 	ArrayList<TemperatureMonitor>temperatureMonitors = new ArrayList<TemperatureMonitor>();
-	ArrayList<Monitor>monitorList = new ArrayList<Monitor>();
+	//ArrayList<Monitor>monitorList = new ArrayList<Monitor>();
 	//String [] rainfall = null;
 	//String [] temperature = null;
 	//Connector connect;
@@ -46,12 +46,7 @@ public class SingleMonitorFactory extends MonitorFactory  {
 
 
     }
-    
-    
-   /* public ArrayList<TemperatureMonitor> getTemperatureMonitors(){
-    	return temperatureMonitors;
-    }
-    */
+
     public ArrayList<Monitor> returnMonitors(){
     	return monitorList;
     }

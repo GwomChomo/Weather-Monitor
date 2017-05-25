@@ -58,10 +58,11 @@ public class CompositeMonitor implements WeatherMonitor {
 		return time;
 	}
 
-	@Override
+
 	public void update(String [] rainfall, String [] temperature) {
 		setRainfall(rainfall);
 		setTemperature(temperature);
+		setTime(temperature);
 		if(controller!=null){
 			populateGraph();
 		}

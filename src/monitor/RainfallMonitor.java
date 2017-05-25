@@ -62,17 +62,23 @@ public class RainfallMonitor implements WeatherMonitor {
 		return time;
 	}
 
-	@Override
-	public void update(String [] rainfall, String [] temperature) {
+
+	/*public void update(String [] rainfall, String [] temperature) {
 
 		update(rainfall);
+	}*/
+
+	public void populateGraph(){
+		controller.populateGraph(this.getClass().getSimpleName(),getLocation(), Double.parseDouble(rainfall), time);
 	}
 
 	public void update( String [] rainfall){
 		setRainfall(rainfall);
 		setTime(rainfall);
+		if(controller!=null){
+			populateGraph();
+		}
 	}
-
 
 	public void view (){
 		try {

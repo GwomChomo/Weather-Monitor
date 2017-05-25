@@ -198,22 +198,6 @@ public class MainController extends Controller implements Initializable{
 			//remove monitor from table
 			monitorSelected.forEach(allMonitors::remove);
 
-
-			//remove monitor from general monitor list
-			/*for(int i = 0; i<allMonitors.size();i++){
-				allMonitors.remove(toUnsubscribe);
-			}*/
-
-			//clear all lists when table is empty. including subjects, as no one is watching them
-			/*if(mainTable.getItems().isEmpty()){
-				if(!subjects.isEmpty()){
-					for(Location l: subjects){
-						l.clearMonitors();
-					}
-					subjects.clear();
-				}
-
-			}*/
 		}
 
 	}
@@ -229,13 +213,14 @@ public class MainController extends Controller implements Initializable{
 
 		try {
 			toUpdate =connect.refresh(toUpdate);
+			mainTable.getItems().clear();
+			mainTable.setItems( FXCollections.observableList(toUpdate));
 		} catch (RemoteException e) {
 			e.printStackTrace();
 		} catch (ExceptionException e) {
 			e.printStackTrace();
 		}
-		//mainTable.getItems().clear();
-		mainTable.setItems( FXCollections.observableList(toUpdate));
+
 		System.out.println("Hello World");
 		wait.playFromStart();
 	}
