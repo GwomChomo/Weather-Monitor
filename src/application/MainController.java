@@ -8,7 +8,6 @@ import java.rmi.RemoteException;
 import connectors.TimeLapseAdapter;
 import connectors.WeatherData;
 import javafx.event.EventHandler;
-
 import org.apache.axis2.AxisFault;
 
 import connectors.MW2WeatherData;
@@ -16,7 +15,6 @@ import factory.CompositeMonitorFactory;
 import factory.MonitorFactory;
 import factory.SingleMonitorFactory;
 import javafx.animation.PauseTransition;
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -158,6 +156,7 @@ public class MainController extends Controller implements Initializable{
 	}
 	
 	public void refreshMonitors() {
+		System.out.println("Updated");
 		ArrayList<Monitor> toUpdate = new ArrayList<>();
 		ObservableList<Monitor> currentItems;
 		currentItems = mainTable.getItems();
@@ -186,7 +185,6 @@ public class MainController extends Controller implements Initializable{
 		if(toView!= null){
 			toView.view();
 		}
-
 	}
 
 
