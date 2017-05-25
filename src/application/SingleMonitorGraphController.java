@@ -37,13 +37,10 @@ public class SingleMonitorGraphController implements Initializable {
 
     public void populateGraph(String className, String location, double data, String timeStamp){
 
-
-
-
+        //System.out.println(data);
         series.getData().add(new XYChart.Data(timeStamp, data));
         if (className.equalsIgnoreCase("RainfallMonitor") || className.equalsIgnoreCase("TemperatureMonitor")){
             time.setLabel("Time");
-            //y.setLabel(className);
             series.setName(className);
             if(count == 0){
                 Linechart.getData().add(series);
@@ -53,6 +50,7 @@ public class SingleMonitorGraphController implements Initializable {
     }
 
     public void populateGraph (String className, String location, double data, double data2, String timeStamp){
+
         series.getData().add(new XYChart.Data(timeStamp, data));
         series2.getData().add(new XYChart.Data(timeStamp, data2));
         time.setLabel("Time");

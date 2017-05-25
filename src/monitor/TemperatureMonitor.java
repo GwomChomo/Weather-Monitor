@@ -8,7 +8,10 @@ import javafx.stage.Stage;
 import subject.Location;
 import subject.Subject;
 
+import java.util.ArrayList;
+
 public class TemperatureMonitor implements WeatherMonitor{
+	ArrayList<View> views = new ArrayList<>();
 
     SingleMonitorGraphController controller;
 	public String temperature, location, time, placeholder, className;
@@ -19,8 +22,15 @@ public class TemperatureMonitor implements WeatherMonitor{
 		this.subject.addMonitors(this);
 		this.location = subject.getName();
 		placeholder = "-";
-		this.temperature = temperature[TEMPERATUREINDEX];
-		this.time =temperature[TIMESTAMPINDEX];	
+		this.time =temperature[TIMESTAMPINDEX];
+		if(temperature[TEMPERATUREINDEX].equalsIgnoreCase("-") || temperature[TEMPERATUREINDEX].equalsIgnoreCase("trace")){
+			this.temperature = "0";
+		}
+		else
+		{
+			this.temperature = temperature[TEMPERATUREINDEX];
+		}
+		views.add(new View (Double.parseDouble(this.temperature), time));
 	}
 
 	public TemperatureMonitor(String location, String [] temperature){
@@ -59,7 +69,9 @@ public class TemperatureMonitor implements WeatherMonitor{
 	}*/
 
 	public void populateGraph(){
-	    controller.populateGraph(this.getClass().getSimpleName(),getLocation(), Double.parseDouble(temperature), time);
+		views.add(new View(Double.parseDouble(this.temperature), time));
+		//System.out.println(views);
+		controller.populateGraph(this.getClass().getSimpleName(),getLocation(), Double.parseDouble(temperature), time);
     }
 
 	public void update (String [] temperature){
@@ -86,8 +98,16 @@ public class TemperatureMonitor implements WeatherMonitor{
                 FXMLLoader fxmlLoader = new FXMLLoader (getClass().getResource("/application/singleMonitorGraphController.fxml"));
                 Parent root = (Parent) fxmlLoader.load();
                 controller = fxmlLoader.getController();
-                //System.out.println(this.getClass().getSimpleName());
-				controller.populateGraph(this.getClass().getSimpleName(),getLocation(), Double.parseDouble(temperature), time);
+               if (!views.isEmpty()){
+				   for (View view: views ){
+
+					   controller.populateGraph(this.getClass().getSimpleName(),getLocation(), view.getData(), view.getTime());
+				   }
+			   }
+			   else{
+				   controller.populateGraph(this.getClass().getSimpleName(),getLocation(), Double.parseDouble(temperature), time);
+			   }
+
 
                 Stage stage = new Stage();
                 stage.setTitle("Temperature at " + location);

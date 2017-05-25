@@ -7,15 +7,8 @@ import java.rmi.RemoteException;
 
 import connectors.TimeLapseAdapter;
 import connectors.WeatherData;
-import factory.Factory;
 import javafx.event.EventHandler;
-import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-import monitor.CompositeMonitor;
-import monitor.TemperatureMonitor;
+
 import org.apache.axis2.AxisFault;
 
 import connectors.MW2WeatherData;
@@ -33,16 +26,10 @@ import javafx.util.Duration;
 import melbourneweather2.ExceptionException;
 
 import monitor.Monitor;
-import monitor.RainfallMonitor;
 import subject.Location;
 
 
 public class MainController extends Controller implements Initializable{
-    ArrayList<Location> locs = new ArrayList<>();
-    ArrayList <CompositeMonitor> compositeMonitors = new ArrayList<CompositeMonitor>();
-    ArrayList <TemperatureMonitor> temperatureMonitors = new ArrayList<TemperatureMonitor>();
-    ArrayList <RainfallMonitor> rainfallMonitors = new ArrayList<RainfallMonitor>();
-	SingleMonitorGraphController controller;
 	ArrayList<Monitor> m = new ArrayList<>();
 
 
@@ -51,25 +38,17 @@ public class MainController extends Controller implements Initializable{
 	
 	ObservableList<Monitor> data;
 	ArrayList<String> locations = new ArrayList<>();
-	ArrayList<Monitor> monitors= new ArrayList<>();
+	//ArrayList<Monitor> monitors= new ArrayList<>();
 
-	//MW2WeatherData connect;
 	WeatherData connect;
-	//MonitorFactory me;
-	
-	//SingleMonitorFactory singleMonitorFactory = new SingleMonitorFactory();
+
 	MonitorFactory singleMonitorFactory = new SingleMonitorFactory();
 
-	//CompositeMonitorFactory compositeMonitorFactory = new CompositeMonitorFactory();
 	MonitorFactory compositeMonitorFactory = new CompositeMonitorFactory();
 
-	//ArrayList<Location> subjects = new ArrayList<>();
-   // ArrayList<Monitor> allMonitors = new ArrayList<>();
-
-    PauseTransition wait = new PauseTransition(Duration.seconds(5));
+    PauseTransition wait;
 	Monitor toView;
 	int count = 0;
-
 
     Location location;
 
@@ -108,9 +87,8 @@ public class MainController extends Controller implements Initializable{
 
 	public void viewWeather(ActionEvent ae) {
 
-
 		if(choice!=null){
-			if(showRainfall.isSelected() && showTemperature.isSelected()  ){
+			if(showRainfall.isSelected() && showTemperature.isSelected()){
 				String [] rainfall = getRainfall(choice);
 				String [] temperature = getTemperature(choice);
 				m.add(compositeMonitorFactory.createCompositeMonitor(new Location(choice), temperature, rainfall));
@@ -123,8 +101,6 @@ public class MainController extends Controller implements Initializable{
 			else if(showRainfall.isSelected()){
 				String [] rainfall = getRainfall(choice);
 				m.add(singleMonitorFactory.createRainfallMonitor(new Location (choice), rainfall));
-				//monitors = singleMonitorFactory.returnMonitors();
-				//m.addAll(monitors);
 			}
 			if(count == 0){
 				setUpTable();
@@ -164,23 +140,21 @@ public class MainController extends Controller implements Initializable{
 
 	public void displayMonitors(ArrayList<Monitor> m){
 		data = FXCollections.observableList(m);
-		System.out.println(data);
 		mainTable.setItems(data);
-		System.out.print(m.size());
 	}
 	
 	public void removeMonitor(ActionEvent ae){
-		ObservableList<Monitor> monitorSelected, allMonitors;
 		Monitor selected;
-		allMonitors = mainTable.getItems();
 		selected = mainTable.getSelectionModel().getSelectedItem();
-		Monitor toUnsubscribe = mainTable.getSelectionModel().getSelectedItem();
 		if(!mainTable.getItems().isEmpty()){
 			mainTable.getItems().remove(selected);
-			int index = m.indexOf(selected);
-			m.remove(index);
 		}
-
+		for(Monitor monitor: m){
+			if(m!= null){
+				int index = m.indexOf(selected);
+				m.remove(index);
+			}
+		}
 	}
 	
 	public void refreshMonitors() {
@@ -202,15 +176,17 @@ public class MainController extends Controller implements Initializable{
 			e.printStackTrace();
 		}
 
-		System.out.println("Hello World");
+		//System.out.println("Hello World");
 		wait.playFromStart();
 	}
 
 	@Override
 	public void viewGraph(ActionEvent ae){
-		//SingleMonitorGraphController s = new SingleMonitorGraphController();
 		toView = mainTable.getSelectionModel().getSelectedItem();
-		toView.view();
+		if(toView!= null){
+			toView.view();
+		}
+
 	}
 
 
@@ -220,6 +196,7 @@ public class MainController extends Controller implements Initializable{
 
 			try {
 				connect = new MW2WeatherData();
+				 wait = new PauseTransition(Duration.minutes(5));
 				initalizeGui();
 			} catch (AxisFault e) {
 				e.printStackTrace();
@@ -228,6 +205,7 @@ public class MainController extends Controller implements Initializable{
 		else if(which.equalsIgnoreCase("TimeLapse")){
 			try {
 				connect = new TimeLapseAdapter();
+				 wait = new PauseTransition(Duration.seconds(20));
 				initalizeGui();
 			} catch (AxisFault e) {
 				e.printStackTrace();

@@ -8,7 +8,11 @@ import javafx.stage.Stage;
 import subject.Location;
 import subject.Subject;
 
+import java.util.ArrayList;
+
 public class RainfallMonitor implements WeatherMonitor {
+	ArrayList<View> views = new ArrayList<>();
+
 	SingleMonitorGraphController controller;
 	String location, rainfall, time, placeholder;
 	Subject subject;
@@ -18,6 +22,7 @@ public class RainfallMonitor implements WeatherMonitor {
 		this.subject = subject;
 		this.subject.addMonitors(this);
 		this.location = subject.getName();
+		placeholder = "-";
 		if(rainfall[RAINFALLINDEX].equals("-") || rainfall[RAINFALLINDEX].equalsIgnoreCase("trace")){
 				this.rainfall = "0";
 		}
@@ -25,7 +30,7 @@ public class RainfallMonitor implements WeatherMonitor {
 			this.rainfall = rainfall [RAINFALLINDEX];
 		}
 		this.time = rainfall[TIMESTAMPINDEX];
-		placeholder = "-";
+		views.add(new View (Double.parseDouble(this.rainfall), time));
 	}
 
 	public RainfallMonitor(String location, String [] rainfall){
@@ -34,11 +39,6 @@ public class RainfallMonitor implements WeatherMonitor {
 		this.rainfall = rainfall[RAINFALLINDEX];
 		this.time = rainfall[TIMESTAMPINDEX];
 	}
-
-	public RainfallMonitor(){
-		System.out.println("In here");
-	}
-	
 	
 	public void setRainfall(String [] rain){
 		rainfall = rain[ RAINFALLINDEX ];
@@ -69,6 +69,7 @@ public class RainfallMonitor implements WeatherMonitor {
 	}*/
 
 	public void populateGraph(){
+		views.add(new View(Double.parseDouble(this.rainfall), time));
 		controller.populateGraph(this.getClass().getSimpleName(),getLocation(), Double.parseDouble(rainfall), time);
 	}
 
@@ -85,8 +86,16 @@ public class RainfallMonitor implements WeatherMonitor {
 			FXMLLoader fxmlLoader = new FXMLLoader (getClass().getResource("/application/singleMonitorGraphController.fxml"));
 			Parent root = fxmlLoader.load();
 			controller = fxmlLoader.getController();
-			//System.out.println(this.getClass().getSimpleName());
-			controller.populateGraph(this.getClass().getSimpleName(),getLocation(), Double.parseDouble(rainfall), time);
+			if (!views.isEmpty()){
+				for (View view: views ){
+
+					controller.populateGraph(this.getClass().getSimpleName(),getLocation(), view.getData(), view.getTime());
+				}
+			}
+			else{
+				controller.populateGraph(this.getClass().getSimpleName(),getLocation(), Double.parseDouble(rainfall), time);
+			}
+			//controller.populateGraph(this.getClass().getSimpleName(),getLocation(), Double.parseDouble(rainfall), time);
 
 			Stage stage = new Stage();
 			stage.setTitle("Rainfall at" + location);
